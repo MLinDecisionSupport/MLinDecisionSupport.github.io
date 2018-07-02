@@ -91,6 +91,21 @@
         </form>
      </div>
 
+<div class='rateML'>
+    <h3>Reflection</h3>
+    <p>Please answer the following:</p>
+    <p><b>Do you feel that the models presented might augment your judgement and constitute a valuable contribution to future decision-support systems?</b></p>
+    <form class = 'rateForm'>
+        <input type='radio' class='rateML' name='rateML' value=0>Yes<br>
+        <input type='radio' class='rateML' name='rateML' value=0>No<br><br>
+        Please explain why or why not:
+        <textarea comments cols=100 rows=5 placeholder='Details...' class = 'RateMLText' name='RateMLText'></textarea>
+        <button class = 'ReflectButton'>Next</button>
+    </form>
+    <br />
+    
+</div>
+
  <div class = 'commentSection'>
     <h3>Comments</h3>
     <p>Please leave any feedback, comments, or concerns about the survey you have just completed.</p>
@@ -100,13 +115,12 @@
             <li>Was any of the model evidence and other information shown particularly effective or ineffective? Why?</li>
             <li>Is there anything else pertaining to the models and patient scenarios you would have liked to see?</li>
             <li>Were there any areas of the survey you felt were confusing or potentially misleading?</li>
-            <li><b>Do you feel that the models presented might augment your judgement and constitute a valuable contribution to future decision-support systems?</b> Why, or why not?</li>
         </ul>
     </p>
     <p><b>Important:</b> Do <b>not</b> include any personally identifiable information, such as name or email address, in your answer below.</p>
     <p>You may also email the primary researcher at oren.lahav@gtc.ox.ac.uk.</p>
     <form class = 'commentForm' id = 'Feedback'>
-        <textarea comments cols=120 rows=5 placeholder='Feedback:' form = 'Feedback'></textarea>
+        <textarea comments cols=120 rows=5 placeholder='Feedback:' class='feedbacktext' name='feedbacktext' form = 'Feedback'></textarea>
         <br />
         <button class = 'FeedbackButton'>Submit</button>
     </form>
@@ -765,6 +779,7 @@
     userContext = 0;
     dataReturn = [];
     whys = [];
+    rating = {};
     var initialSeqData;
 
     //Set code to run once page is loaded
@@ -790,6 +805,7 @@
         $('.commentSection').hide();
         $('.whyLow').hide();
         $('.whyHigh').hide();
+        $('.rateML').hide();
 
         //Show full survey details
         $('.showStudyInfo').on('click', function() {
@@ -907,7 +923,7 @@
                             //If not, display finished and exit loop:
                             if(clicked==questionCounter)
                             {
-                                $('.commentSection').show();
+                                $('.rateML').show();
 
                                 console.log(dataReturn);
                                         
@@ -1011,7 +1027,7 @@
                             //If not, display finished and exit loop:
                             if(clicked==questionCounter)
                             {
-                                $('.commentSection').show();
+                                $('.rateML').show();
 
                                 console.log(dataReturn);
                                         
@@ -1090,7 +1106,7 @@
                         //If not, display finished and exit loop:
                         if(clicked==questionCounter)
                         {
-                            $('.commentSection').show();
+                            $('.rateML').show();
 
                             console.log(dataReturn);
                                         
@@ -1128,13 +1144,33 @@
 
         //When 'Submit' is clicked (i.e. we're done)
 
+        //Display reflection section
+        $('.rateForm').on('submit', function(e){
+            //Prevent page from refreshing
+            e.preventDefault();
+
+            console.log('Rating')
+
+            console.log($('input[name=rateML]:checked').val());
+            console.log($('.rateMLText').val());
+
+            rating = {
+                good: $('input[name=rateML]:checked').val(),
+                reason: $('.rateMLText').val()
+            };
+
+            $('.rateML').hide();
+            $('.commentSection').show();
+        })
+
+
         //Grab Comments and finish things
         $('.commentForm').on('submit', function(e){
             //Prevent page from refreshing
             e.preventDefault();
 
             //Get response
-            userFeedback = $('textarea').val();
+            userFeedback = $('.feedbacktext').val();
             console.log('Feedback:');
             console.log(userFeedback);
 
@@ -1165,7 +1201,8 @@
                 context : 'M'+userContext,
                 feedback : userFeedback,
                 qSequence : runSummary,
-                whys: whyResults
+                whys: whyResults,
+                rated : rating
             };
 
             console.log('Results recorded:');
