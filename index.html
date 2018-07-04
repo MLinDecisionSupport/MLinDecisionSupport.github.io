@@ -70,10 +70,39 @@
         <button class='StartPart1'>Next</button>
  </div>
 
+ <div class = 'Part1'>
+    <h2><b>Part 1</b>: About the Model</h2>
+    <p>Please consider the following:</p>
+
+    <div class = 'Evidence1'>
+        <h3>Data</h3>
+        <p>The model was trained using the Meta-analysis Global Group in Chronic Heart Failure (MAGGIC) data-set, which compiled patient data from 30 studies including both randomized clinical trials and observational registries.</p>
+        <p>The data set included <b>30,389</b> patients who have experienced a <b>heart failure</b> event. Of these, 18.8% died within 1 year of experiencing heart failure.</p>
+        <p>31 patient characteristics were collected, including:</p>
+        <ul>
+            <li><b>Basic patient details</b>: Age, gender, ethnicity</li>
+            <li><b>Patient habits</b>: BMI, Smoking, Diabetes condition</li>
+            <li><b>Physical symptoms</b>: Shortness of breath (at rest and exercise), rales</li>
+            <li><b>Relevant prescriptions</b>: ACE inhibitors, Beta blockers</li>
+            <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
+            <li><b>New York Heart Association Score</b> (Class I-IV)</li>
+        </ul>
+        <div class = 'E1Q' class='evForm'>
+                <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: Not useful - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: Somewhat useful - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: Very useful - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                <button class = 'evFormButton'>Next</button>
+        </div>
+    </div>
+
+</div>
+
+
  <div class = 'IntroPart2'>
         <h2><b>Part 2</b>: Decision Support System</h2>
         <p>On the next screen, you will be presented with a series of patients.</p>
-        <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected at random.</p>
+        <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
         <p>Each patient will be accompanied by a risk score generated using the Neural Network model discussed previously. In addition, medical information about the individual patients will be presented as well.</p>
         <p>Please evaluate this information, and rate your satisfaction with the model and the Decision Support System as a whole.</p>
         <p>Click 'Next' to proceed</p>
@@ -96,17 +125,12 @@
 
         <div class = 'P1AQ' class='patientForm'>
                 <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                <!--<form class='P1AQForm' class='patientForm'>-->
-                    <div class='answers'>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
-                        <!--<input type='submit' value='Next'>    
-                </form>-->
-                    </div>
-                    <button class = 'patientFormButton'>Next</button>
+                        <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
 
@@ -201,14 +225,14 @@
                     <option value='1'>ACE Inhibitors</option>
                     <option value='2'>Beta Blockers</option>
             </select>
-            <button class = 'P1BPButton'>Submit</button><br><br>
+            <button class = 'P1BPButton'>Calculate</button><br><br>
             Predicted Risk Score: 
             <div class = 'P1BP1'>15.9%</div>
-            <div class = 'P1BP2' class = 'P1BP'>14.9%</div>
-            <div class = 'P1BP3' class = 'P1BP'>13.9%</div>
-            <div class = 'P1BP4' class = 'P1BP'>12.9%</div>
-            <div class = 'P1BP5' class = 'P1BP'>11.9%</div>
-            <div class = 'P1BP6' class = 'P1BP'>10.9%</div>
+            <div class = 'P1BP2' class = 'P1BP'>12.9%</div>
+            <div class = 'P1BP3' class = 'P1BP'>13.4%</div>
+            <div class = 'P1BP4' class = 'P1BP'>15.1%</div>
+            <div class = 'P1BP5' class = 'P1BP'>12.2%</div>
+            <div class = 'P1BP6' class = 'P1BP'>12.6%</div>
         </div>
 
         <div class = 'P1BQ'>
@@ -246,14 +270,14 @@
                         <option value='1'>ACE Inhibitors</option>
                         <option value='2'>Beta Blockers</option>
                 </select>
-                <button class = 'P2BPButton'>Submit</button><br><br>
+                <button class = 'P2BPButton'>Calculate</button><br><br>
                 Predicted Risk Score: 
-                <div class = 'P2BP1'>15.9%</div>
-                <div class = 'P2BP2' class = 'P2BP'>14.9%</div>
-                <div class = 'P2BP3' class = 'P2BP'>13.9%</div>
-                <div class = 'P2BP4' class = 'P2BP'>12.9%</div>
-                <div class = 'P2BP5' class = 'P2BP'>11.9%</div>
-                <div class = 'P2BP6' class = 'P2BP'>10.9%</div>
+                <div class = 'P2BP1'>83.5%</div>
+                <div class = 'P2BP2' class = 'P2BP'>77.2%</div>
+                <div class = 'P2BP3' class = 'P2BP'>77.6%</div>
+                <div class = 'P2BP4' class = 'P2BP'>68.4%</div>
+                <div class = 'P2BP5' class = 'P2BP'>61.7%</div>
+                <div class = 'P2BP6' class = 'P2BP'>62.3%</div>
             </div>
 
             <div class = 'P2BQ'>
@@ -280,7 +304,7 @@
     
             <button class = 'P3BButton'>Interact with Decision Support System</button>
             <div class = 'Patient3BDSS' class = 'P3B'>
-                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <p>Examine how the following factors might impact Clara's predicted risk score, based on the Neural Network model utilized:</p>
                 <select class = 'P3BS1'>
                         <option value='0'>Smoker</option>
                         <option value='1'>Non-smoker</option>
@@ -290,14 +314,14 @@
                         <option value='1'>BMI of 30</option>
                         <option value='2'>BMI of 27</option>
                 </select>
-                <button class = 'P3BPButton'>Submit</button><br><br>
+                <button class = 'P3BPButton'>Calculate</button><br><br>
                 Predicted Risk Score: 
-                <div class = 'P3BP1'>15.9%</div>
-                <div class = 'P3BP2' class = 'P3BP'>14.9%</div>
-                <div class = 'P3BP3' class = 'P3BP'>13.9%</div>
-                <div class = 'P3BP4' class = 'P3BP'>12.9%</div>
-                <div class = 'P3BP5' class = 'P3BP'>11.9%</div>
-                <div class = 'P3BP6' class = 'P3BP'>10.9%</div>
+                <div class = 'P3BP1'>60.5%</div>
+                <div class = 'P3BP2' class = 'P3BP'>61.0%</div>
+                <div class = 'P3BP3' class = 'P3BP'>61.3%</div>
+                <div class = 'P3BP4' class = 'P3BP'>54.2%</div>
+                <div class = 'P3BP5' class = 'P3BP'>54.6%</div>
+                <div class = 'P3BP6' class = 'P3BP'>54.9%</div>
             </div>
 
             <div class = 'P3BQ'>
@@ -320,11 +344,11 @@
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
             His sodium level is 131, and creatine is 135.</p>-->
             <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
-            <p>Drew is diabetic, but a non-smoker.</p>
+            <p>Drew is diabetic, but Drew does does not effectively manage his diabetes. He is a non-smoker.</p>
     
             <button class = 'P4BButton'>Interact with Decision Support System</button>
             <div class = 'Patient4BDSS' class = 'P4B'>
-                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <p>Examine how the following factors might impact Drew's predicted risk score, based on the Neural Network model utilized:</p>
                 <select class = 'P4BS1'>
                         <option value='0'>Diabetes - unmanaged</option>
                         <option value='1'>Diabetes - managed</option>
@@ -333,12 +357,12 @@
                         <option value='0'>Age 70</option>
                         <option value='1'>Age 80</option>
                 </select>
-                <button class = 'P4BPButton'>Submit</button><br><br>
+                <button class = 'P4BPButton'>Calculate</button><br><br>
                 Predicted Risk Score: 
-                <div class = 'P4BP1'>15.9%</div>
-                <div class = 'P4BP2' class = 'P4BP'>14.9%</div>
-                <div class = 'P4BP3' class = 'P4BP'>13.9%</div>
-                <div class = 'P4BP4' class = 'P4BP'>12.9%</div>
+                <div class = 'P4BP1'>72.0%</div>
+                <div class = 'P4BP2' class = 'P4BP'>64.4%</div>
+                <div class = 'P4BP3' class = 'P4BP'>77.8%</div>
+                <div class = 'P4BP4' class = 'P4BP'>73.9%</div>
             </div>
 
             <div class = 'P4BQ'>
@@ -348,6 +372,206 @@
                             <input type='radio' name='P4BQ' class='P4BQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
                             <input type='radio' name='P4BQ' class='P4BQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
                             <input type='radio' name='P4BQ' class='P4BQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+
+
+    <div class = 'Patient1C' class = 'P1C'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
+            <p>Patient <b>Adam</b>, 43-year-old caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the next year is <b>15.9%</b>.</p>
+            <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
+            The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
+            <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
+            His sodium level is 145, and creatine is 64.</p>-->
+            <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
+            <p>Adam admits to being an occasional smoker. He does not suffer from diabetes.</p>
+
+        <button class = 'P1CButton'>Interact with Decision Support System</button>
+        <div class = 'Patient1CDSS' class = 'P1C'>
+            <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+            <select class = 'P1CS1'>
+                    <option value='0'>Smoker</option>
+                    <option value='1'>Non-smoker</option>
+            </select>
+            <select class = 'P1CS2'>
+                    <option value='0'>No prescription</option>
+                    <option value='1'>ACE Inhibitors</option>
+                    <option value='2'>Beta Blockers</option>
+            </select>
+            <button class = 'P1CPButton'>Calculate</button><br><br>
+            Predicted Risk Score: 
+            <div class = 'P1CP1'>15.9%</div>
+            <div class = 'P1CP2' class = 'P1CP'>12.9%</div>
+            <div class = 'P1CP3' class = 'P1CP'>13.4%</div>
+            <div class = 'P1CP4' class = 'P1CP'>15.1%</div>
+            <div class = 'P1CP5' class = 'P1CP'>12.2%</div>
+            <div class = 'P1CP6' class = 'P1CP'>12.6%</div>
+        </div>
+
+        <p>Click below to find the patient's status 1 year after the heart failure event</p>
+        <button class = 'P1CButton2'>Show Patient Outcome</button>
+        <div class=P1CO>
+            <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
+        </div>
+
+        <div class = 'P1CQ'>
+            <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                    <button class = 'patientFormButton'>Next</button>
+        </div>
+
+    </div>
+
+    <div class = 'Patient2C'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
+            <p>Patient <b>Betty</b>, 86-year-old non-caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the next year is <b>83.5%</b>.</p>
+            <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
+            The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
+            Her sodium level is 138, and creatine is 132.6.</p>-->
+            <p>Betty has not been prescribed either ACE inhibitors or Beta blockers.</p>
+            <p>Betty does not smoke, and does not suffer from diabetes. She does suffer from angina.</p>
+    
+            <button class = 'P2CButton'>Interact with Decision Support System</button>
+            <div class = 'Patient2CDSS' class = 'P2C'>
+                <p>Examine how the following factors might impact Betty's predicted risk score, based on the Neural Network model utilized:</p>
+                <select class = 'P2CS1'>
+                        <option value='0'>New York Association Score Class IV</option>
+                        <option value='1'>New York Association Score Class III</option>
+                </select>
+                <select class = 'P2CS2'>
+                        <option value='0'>No prescription</option>
+                        <option value='1'>ACE Inhibitors</option>
+                        <option value='2'>Beta Blockers</option>
+                </select>
+                <button class = 'P2CPButton'>Calculate</button><br><br>
+                Predicted Risk Score: 
+                <div class = 'P2CP1'>83.5%</div>
+                <div class = 'P2CP2' class = 'P2CP'>77.2%</div>
+                <div class = 'P2CP3' class = 'P2CP'>77.6%</div>
+                <div class = 'P2CP4' class = 'P2CP'>68.4%</div>
+                <div class = 'P2CP5' class = 'P2CP'>61.7%</div>
+                <div class = 'P2CP6' class = 'P2CP'>62.3%</div>
+            </div>
+
+            <p>Click below to find the patient's status 1 year after the heart failure event</p>
+            <button class = 'P2CButton2'>Show Patient Outcome</button>
+            <div class=P2CO>
+                <p><i>Patient Betty unfortunately passed away 3 months following her heart failure event.</i></p>
+            </div>
+
+            <div class = 'P2CQ'>
+                    <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+    <div class = 'Patient3C'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
+            <p>Patient <b>Clara</b>, 54-year-old caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the next year is <b>60.5%</b>.</p>
+            <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
+                The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
+            <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
+            Her sodium level is 138, and creatine is 107.</p>-->
+            <p>Clara has been prescribed ACE inhibitors.</p>
+            <p>Clara is diabetic, and smokes regularly.</p>
+    
+            <button class = 'P3CButton'>Interact with Decision Support System</button>
+            <div class = 'Patient3CDSS' class = 'P3C'>
+                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <select class = 'P3CS1'>
+                        <option value='0'>Smoker</option>
+                        <option value='1'>Non-smoker</option>
+                </select>
+                <select class = 'P3CS2'>
+                        <option value='0'>BMI of 33</option>
+                        <option value='1'>BMI of 30</option>
+                        <option value='2'>BMI of 27</option>
+                </select>
+                <button class = 'P3CPButton'>Calculate</button><br><br>
+                Predicted Risk Score: 
+                <div class = 'P3CP1'>60.5%</div>
+                <div class = 'P3CP2' class = 'P3CP'>61.0%</div>
+                <div class = 'P3CP3' class = 'P3CP'>61.3%</div>
+                <div class = 'P3CP4' class = 'P3CP'>54.2%</div>
+                <div class = 'P3CP5' class = 'P3CP'>54.6%</div>
+                <div class = 'P3CP6' class = 'P3CP'>54.9%</div>
+            </div>
+
+            <p>Click below to find the patient's status 1 year after the heart failure event</p>
+            <button class = 'P3CButton2'>Show Patient Outcome</button>
+            <div class=P3CO>
+                <p><i>Patient Clara was alive one year after her heart failure event. However, she passed away 2 years later.</i></p>
+            </div>
+
+            <div class = 'P3CQ'>
+                    <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+    <div class = 'Patient4C'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the next year is <b>72.0%</b>.</p>
+            <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
+                The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
+            His sodium level is 131, and creatine is 135.</p>-->
+            <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
+            <p>Drew is diabetic, but a non-smoker.</p>
+    
+            <button class = 'P4CButton'>Interact with Decision Support System</button>
+            <div class = 'Patient4CDSS' class = 'P4C'>
+                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <select class = 'P4CS1'>
+                        <option value='0'>Diabetes - unmanaged</option>
+                        <option value='1'>Diabetes - managed</option>
+                </select>
+                <select class = 'P4CS2'>
+                        <option value='0'>Age 70</option>
+                        <option value='1'>Age 80</option>
+                </select>
+                <button class = 'P4CPButton'>Calculate</button><br><br>
+                Predicted Risk Score: 
+                <div class = 'P4CP1'>72.0%</div>
+                <div class = 'P4CP2' class = 'P4CP'>77.8%</div>
+                <div class = 'P4CP3' class = 'P4CP'>64.4%</div>
+                <div class = 'P4CP4' class = 'P4CP'>73.9%</div>
+            </div>
+
+            <p>Click below to find the patient's status 1 year after the heart failure event</p>
+            <button class = 'P4CButton2'>Show Patient Outcome</button>
+            <div class=P4CO>
+                <p><i>One year after his heart failure event, Patient Drew was alive. He unfortunately passed away 16 months following his heart failure event.</i></p>
+            </div>
+
+            <div class = 'P4CQ'>
+                    <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -652,6 +876,7 @@
                     section: 2, possibleSequences:[
                         {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -1102,6 +1327,13 @@
 
         //Variables:
         interactP1 = 0;
+        interactP2 = 0;
+        interactP3 = 0;
+        interactP4 = 0;
+        outcomeP1 = 0;
+        outcomeP2 = 0;
+        outcomeP3 = 0;
+        outcomeP4 = 0;
 
         //Hide all questions and sections:
         $('.question').hide();
@@ -1113,6 +1345,9 @@
         $('.whyHigh').hide();
         $('.rateML').hide();
         $('.IntroPart1').hide();
+        $('.Part1').hide();
+        $('.Evidence1').hide();
+
         $('.IntroPart2').hide();
         $('.Part2').hide();
         $('.Patient1A').hide();
@@ -1123,6 +1358,13 @@
         $('.P1BP4').hide();
         $('.P1BP5').hide();
         $('.P1BP6').hide();
+        $('.Patient1C').hide();
+        $('.Patient1CDSS').hide();
+        $('.P1CP2').hide();
+        $('.P1CP3').hide();
+        $('.P1CP4').hide();
+        $('.P1CP5').hide();
+        $('.P1CP6').hide();
         $('.Patient2A').hide();
         $('.Patient2B').hide();
         $('.Patient2BDSS').hide();
@@ -1131,6 +1373,13 @@
         $('.P2BP4').hide();
         $('.P2BP5').hide();
         $('.P2BP6').hide();
+        $('.Patient2C').hide();
+        $('.Patient2CDSS').hide();
+        $('.P2CP2').hide();
+        $('.P2CP3').hide();
+        $('.P2CP4').hide();
+        $('.P2CP5').hide();
+        $('.P2CP6').hide();
         $('.Patient3A').hide();
         $('.Patient3B').hide();
         $('.Patient3BDSS').hide();
@@ -1139,12 +1388,30 @@
         $('.P3BP4').hide();
         $('.P3BP5').hide();
         $('.P3BP6').hide();
+        $('.Patient3C').hide();
+        $('.Patient3CDSS').hide();
+        $('.P3CP2').hide();
+        $('.P3CP3').hide();
+        $('.P3CP4').hide();
+        $('.P3CP5').hide();
+        $('.P3CP6').hide();
         $('.Patient4A').hide();
         $('.Patient4B').hide();
         $('.Patient4BDSS').hide();
         $('.P4BP2').hide();
         $('.P4BP3').hide();
         $('.P4BP4').hide();
+        $('.Patient4C').hide();
+        $('.Patient4CDSS').hide();
+        $('.P4CP2').hide();
+        $('.P4CP3').hide();
+        $('.P4CP4').hide();
+        $('.P4CP5').hide();
+        $('.P4CP6').hide();
+        $('.P1CO').hide();
+        $('.P2CO').hide();
+        $('.P3CO').hide();
+        $('.P4CO').hide();
 
 
         //Show full survey details
@@ -1172,6 +1439,46 @@
             $('.Patient4BDSS').toggle();
             interactP1 = 1;
         })
+
+        $('.P1CButton').on('click', function() {
+            $('.Patient1CDSS').toggle();
+            interactP1 = 1;
+        })
+
+        $('.P2CButton').on('click', function() {
+            $('.Patient2CDSS').toggle();
+            interactP1 = 1;
+        })
+
+        $('.P3CButton').on('click', function() {
+            $('.Patient3CDSS').toggle();
+            interactP1 = 1;
+        })
+
+        $('.P4CButton').on('click', function() {
+            $('.Patient4CDSS').toggle();
+            interactP1 = 1;
+        })
+
+        $('.P1CButton2').on('click', function() {
+            $('.P1CO').toggle();
+            outcomeP1 = 1;
+        })   
+
+        $('.P2CButton2').on('click', function() {
+            $('.P2CO').toggle();
+            outcomeP2 = 1;
+        })   
+
+        $('.P3CButton2').on('click', function() {
+            $('.P3CO').toggle();
+            outcomeP3 = 1;
+        })   
+
+        $('.P4CButton2').on('click', function() {
+            $('.P4CO').toggle();
+            outcomeP4 = 1;
+        })        
 
         $('.P1BPButton').on('click', function() {
             $('.P1BP1').hide();
@@ -1323,6 +1630,156 @@
             }
         })
 
+        $('.P1CPButton').on('click', function() {
+            $('.P1CP1').hide();
+            $('.P1CP2').hide();
+            $('.P1CP3').hide();
+            $('.P1CP4').hide();
+            $('.P1CP5').hide();
+            $('.P1CP6').hide();
+
+            if($('.P1CS1').val()==0)
+            {
+                if($('.P1CS2').val()==0)
+                {
+                    $('.P1CP1').show();
+                }
+                else if($('.P1CS2').val()==1)
+                {
+                    $('.P1CP2').show();
+                }
+                else
+                {
+                    $('.P1CP3').show();
+                }
+            }
+            else
+            {
+                if($('.P1CS2').val()==0)
+                {
+                    $('.P1CP4').show();
+                }
+                else if($('.P1CS2').val()==1)
+                {
+                    $('.P1CP5').show();
+                }
+                else
+                {
+                    $('.P1CP6').show();
+                }
+            }
+        })
+
+        $('.P2CPButton').on('click', function() {
+            $('.P2CP1').hide();
+            $('.P2CP2').hide();
+            $('.P2CP3').hide();
+            $('.P2CP4').hide();
+            $('.P2CP5').hide();
+            $('.P2CP6').hide();
+
+            if($('.PCS2').val()==0)
+            {
+                if($('.P2CS2').val()==0)
+                {
+                    $('.P2CP1').show();
+                }
+                else if($('.P2CS2').val()==1)
+                {
+                    $('.P2CP2').show();
+                }
+                else
+                {
+                    $('.P2CP3').show();
+                }
+            }
+            else
+            {
+                if($('.P2CS2').val()==0)
+                {
+                    $('.P2CP4').show();
+                }
+                else if($('.P2CS2').val()==1)
+                {
+                    $('.P2CP5').show();
+                }
+                else
+                {
+                    $('.P2CP6').show();
+                }
+            }
+        })
+
+        $('.P3CPButton').on('click', function() {
+            $('.P3CP1').hide();
+            $('.P3CP2').hide();
+            $('.P3CP3').hide();
+            $('.P3CP4').hide();
+            $('.P3CP5').hide();
+            $('.P3CP6').hide();
+
+            if($('.P3CS1').val()==0)
+            {
+                if($('.P3CS2').val()==0)
+                {
+                    $('.P3CP1').show();
+                }
+                else if($('.P3CS2').val()==1)
+                {
+                    $('.P3CP2').show();
+                }
+                else
+                {
+                    $('.P3CP3').show();
+                }
+            }
+            else
+            {
+                if($('.P3CS2').val()==0)
+                {
+                    $('.P3CP4').show();
+                }
+                else if($('.P3CS2').val()==1)
+                {
+                    $('.P3CP5').show();
+                }
+                else
+                {
+                    $('.P3CP6').show();
+                }
+            }
+        })
+
+        $('.P4CPButton').on('click', function() {
+            $('.P4CP1').hide();
+            $('.P4CP2').hide();
+            $('.P4CP3').hide();
+            $('.P4CP4').hide();
+
+            if($('.P4CS1').val()==0)
+            {
+                if($('.P4CS2').val()==0)
+                {
+                    $('.P4CP1').show();
+                }
+                else
+                {
+                    $('.P4CP2').show();
+                }
+            }
+            else
+            {
+                if($('.P4CS2').val()==0)
+                {
+                    $('.P4CP3').show();
+                }
+                else
+                {
+                    $('.P4CP4').show();
+                }
+            }
+        })
+
 
 
         //Initiate survey:
@@ -1344,8 +1801,22 @@
         //Start Part 1:
         $('.IntroPart1').on('click', function() {
             $('.IntroPart1').hide();
-            $('.IntroPart2').show();
+            $('.Part1').show();
+            $('.Evidence1').show();
         })
+
+        //Move through Part 1:
+        $('.evFormButton').on('click',function(){
+
+            if($('.E1Q').is(':checked'))
+            {
+                $('.Evidence1').hide();
+                $('.IntroPart2').show();
+
+                $('.Part1').hide();
+            }
+        })
+
 
         //Move to Part 2:
         $('.IntroPart2').on('click', function() {
