@@ -23,16 +23,17 @@
         <li><b>Decision Support</b>, which introduces a mock decision-support system designed to present predicted risk scores for patients</li>
     </ol> 
     
-    In this study, we focus on patients who have experienced heart failure, and predict the probability, or risk, of death 1 year after their heart failure event.<br/><br/>
+    In this study, we focus on patients who have experienced heart failure, and predict the probability, or risk, of death one year after their heart failure event.<br/><br/>
     Please click below for full details before you start the survey.</p>
     <button class = 'showStudyInfo'>Full Study Info</button>
   <div class='studyInfo' style='font-size:75%;'>
     <h5>General Information</h5>
         <p>Machine Learning and Artificial Intelligence models are gaining enthusiasm for their ability to produce highly accurate predictive and analytical insights. However, as many such models, including neural networks, are <i>black-boxes</i>, many fields of practice are reluctant to utilize these models without an ability to interpret their results or understand how a model generates its prediction.</p>
+        <p>As a result, although ML models appear like natural and powerful choices for powering systems that support and augment decision-making processes for medical clinicians, there has so far not been a heavy push to incorporate these into practice in the medical field.</p>
         <p>The aim of this study is to explore this phenomenon and understand what type of model evidence and interpretability modules will increase comprehension and the confidence levels for users in different machine learning predictive models utilized in decision-support systems for prognostics.</p>
         <p>We appreciate your interest in participating in this online survey. You have been invited to participate as an expert in medicine, computer science, or related. Please read through these terms before beginning the survey. You will participate by ticking the <i>Start</i> box below. You may ask any questions before taking part by contacting the researcher (details below).</p>
-        <p>We, the University of Oxford, are investigating Machine Learning model interpretability. You will be presented with limited information on a machine learning model, followed by further evidence regrading the model. You will then be asked to rate your confidence level with utilizing the model for predictive purposes and support your answers.</p>
-        <p>The full survey should take about 15-20 minutes. No background knowledge is required. Your results will be utilized to determine the best interpretability modules and types of evidence to present to potential users of different machine learning models, and will be collected and utilized by the Computer Science and Engineering Departments at Oxford. <b>No personally identifiable information will be collected or shared</b>.</p>
+        <p>We, the University of Oxford, are investigating Machine Learning models in decision-support systems. You will be presented with a sequence of information on a machine learning model, followed by interactive patient scenarios and risk scores as may be presented by a decision-support system relying on the model described. You will then be asked to rate your confidence level with utilizing the system for decision-making purposes and support your answers.</p>
+        <p>The full survey should take about 15-20 minutes. No background knowledge is required. Your results will be utilized to determine the best interpretability modules and types of evidence to present to potential users of medical decision-support systems powered by machine learning models, and will be collected and utilized by the Computer Science and Engineering Departments at Oxford. <b>No personally identifiable information will be collected or shared</b>.</p>
     <h5>Do I have to take part?</h5>
         <p>Please note that your participation is voluntary. You may withdraw at any point during the questionnaire for any reason, before submitting your answers, by closing the browser. None of your answers will then be collected.</p>
     <h5>How will your data be used?</h5>
@@ -42,7 +43,7 @@
         <p>The University of Oxford is the data controller for the purposes of the Data Protection Act 1998.</p>
         <p>We would like your permission to use your unidentifiable data in future studies, and to share data with other researchers (e.g. in online databases).</p>
         <p>Any personal information that could identify you will not be collected or be removed before files are shared with other researchers or results are made public.</p>
-        <p>This survey is for an MSc project. The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
+        <p>This survey is for an MSc project. The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar of the Oxford Man Institute. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
     <h5>What if there is a problem?</h5>
         <p>If you have a concern about any aspect of this project, please speak to the researcher at oren.lahav@gtc.ox.ac.uk who will do his best to answer your query. The researcher should acknowledge your concern within 10 working days and give you an indication of how they intend to deal with it.</p>
         <p>If you are over 18 and have read the information above and agree to participate with the understanding that the data (including any personal data) you submit will be processed accordingly, please click the ‘Start’ box below to get started. By doing so you will be providing your consent to participate.</p>
@@ -65,8 +66,8 @@
 
  <div class = 'IntroPart1'>
         <h2><b>Part 1</b>: About the Model</h2>
-        <p>On the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
-        <p>Please click on the 'Display' button to show each piece of information, and rate how useful you find them.</p>
+        <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
+        <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your comprehension of, and confidence in, the decision-support system based on it.</p>
         <p>Click 'Next' to proceed</p>
         <button class='StartPart1'>Next</button>
  </div>
@@ -84,13 +85,13 @@
             <li><b>Basic patient details</b>: Age, gender, ethnicity</li>
             <li><b>Patient habits</b>: BMI, Smoking, Diabetes condition</li>
             <li><b>Physical symptoms</b>: Shortness of breath (at rest and exercise), rales</li>
-            <li><b>Relevant prescriptions</b>: ACE inhibitors, Beta blockers</li>
+            <li><b>Relevant prescriptions</b>: ACE inhibitors/ARB, Beta blockers</li>
             <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
             <li><b>New York Heart Association Score</b> (Class I-IV)</li>
         </ul>
         <hr style="border-top: dotted 1px;" />
         <div class = 'E1Q' class='evForm'>
-                <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                <p>How useful do you find this information about the data used to train the model powering a decision-support system for heart failure patients?</p>
                 <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
                 <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                 <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
@@ -100,16 +101,16 @@
 
     <div class = 'Evidence2'>
             <h3>Model Training and Implementation</h3>
-            <p>The model utilized was a <b>Neural Network</b>, a sophisticated deep learning method that has seen increased attention in recent years, as multiple studies have shown to vastly outperform simpler linear models that have been traditionally used to generate risk scores in medicine.</p>
-            <p>A neural network is a machine learning algorithm inspired by the human brain, utilizing connected nodes organized in hidden layers. The network uses optimization techniques and non-linear activation functions to automatically discover complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>The model utilized was a Neural Network, a sophisticated deep learning algorithm that has seen increased attention in recent years, as multiple studies have shown it to vastly outperform simpler linear models and other methods that have been traditionally utilized to generate risk scores in medicine.</p>
+            <p>A neural network is a Machine Learning algorithm inspired by the human brain, utilizing connected nodes organized in hidden layers. The network uses optimization techniques and non-linear activation functions to automatically discover complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
             <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
             <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
             <p>The network takes in a large amount of data, in the form of patient characteristics, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
-            <p>The Neural Network we utilized contained 2 hidden laters of 100 and 20 nodes each. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
+            <p>The Neural Network we utilized contained 2 hidden layers of 100 and 20 nodes respectively. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
             <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run.</p>
             <hr style="border-top: dotted 1px;" />
             <div class = 'E2Q' class='evForm'>
-                    <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                    <p>How useful do you find this information about the architecture and training methodology behind the model powering a decision-support system for heart failure patients?</p>
                     <input type='radio' name='E2Q' class='E2Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
                     <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                     <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
@@ -120,14 +121,14 @@
         <div class = 'Evidence3'>
                 <h3>Model Accuracy</h3>
                 <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
-                <p>The model's AUC-ROC (receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a stadnard deviation of 0.0054, averaged over 10 runs.<br/>This value is much higher than the best linear regression model, which achieves AUC-ROC of 0.537. It is also significantly higher than the AUC-ROC of the MAGGIC Risk Score, which is 0.6933. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>.</p>
+                <p>The model's AUC-ROC (receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs.<br/>This value is much higher than the best linear regression model, which achieves AUC-ROC of 0.537. It is also significantly higher than the AUC-ROC of the MAGGIC Risk Score, which is 0.6933. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>.</p>
                 <p>The model's ROC curve is below:</p>
                 <p style="text-align:center;"><img src="NNROC.png" style="width:250px;"></p>
                 <p>In addition, the model achieves an AUC-PR (precision recall curve) of <b>0.376</b>, higher than a Linear Regression model (0.250) and the MAGGIC Risk Score (0.342). For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>. </p>
                 <p>These metrics showcase the neural network model's high accuracy, especially when compared with alternative, simpler statistical models, and established risk scores.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E3Q' class='evForm'>
-                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <p>How useful do you find this information about the accuracy of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
                         <input type='radio' name='E3Q' class='E3Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                         <input type='radio' name='E3Q' class='E3Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
@@ -137,16 +138,16 @@
 
         <div class = 'Evidence4'>
                 <h3>Model Interpretation: Stratified Linear Approximation</h3>
-                <p>Black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, like linear regression models.</p>
+                <p>Black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, including linear regression models.</p>
                 <p>To create local approximations, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
                 <p>The Root Mean-Sqaured Error between the neural network model and the linear approximation is 0.036, suggesting the 2 models are very close.</p>
                 <p>Below is a summary of the coefficients for each local linear model:</p>
                 <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
-                <p>The value of each coefficient represents their contribution to the variability in predicted patient risk score.</p>
+                <p>The value of each characteristic’s coefficient represents their contribution to the variability in predicted patient risk score.</p>
                 <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E4Q' class='evForm'>
-                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <p>How useful do you find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
                         <input type='radio' name='E4Q' class='E4Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                         <input type='radio' name='E4Q' class='E4Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
@@ -156,15 +157,15 @@
 
         <div class = 'Evidence5'>
                 <h3>Model Interpretation: Decision Tree</h3>
-                <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, like decision trees.</p>
+                <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
                 <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
                 <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
                 <p>Below is a summary of the depth-3 trees for each local linear model:</p>
                 <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
-                <p>Note that each risk stratum utilizes different patient charactertistics for classification. Few patients are classified in the 80-100% class.</p>
+                <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E5Q' class='evForm'>
-                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <p>How useful do you find this decision-tree approximation of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
                         <input type='radio' name='E5Q' class='E5Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                         <input type='radio' name='E5Q' class='E5Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
@@ -191,7 +192,7 @@
 
  <div class = 'IntroPart2'>
         <h2><b>Part 2</b>: Decision Support System</h2>
-        <p>On the next screen, you will be presented with a series of patients.</p>
+        <p>Starting on the next screen, you will be presented with a series of patients.</p>
         <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
         <p>Each patient will be accompanied by a risk score generated using the Neural Network model discussed previously. In addition, medical information about the individual patients will be presented as well.</p>
         <p>Please evaluate this information, and rate your satisfaction with the model and the Decision Support System as a whole.</p>
@@ -205,7 +206,7 @@
     <div class = 'Patient1A'>
         <p>Please examine the following patient:</p>
         <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
-        <p>Patient <b>Adam</b>, 43-year-old caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the next year is <b>15.9%</b>.</p>
+        <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
         <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
         The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
         <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
@@ -218,7 +219,7 @@
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                         <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                         <button class = 'patientFormButton'>Next</button>
             </div>
@@ -227,7 +228,7 @@
     <div class = 'Patient2A'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
-            <p>Patient <b>Betty</b>, 86-year-old non-caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the next year is <b>83.5%</b>.</p>
+            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
             The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
@@ -240,7 +241,7 @@
                             <input type='radio' name='P2AQ' class='P2AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P2AQ' class='P2AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P2AQ' class='P2AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2AQ' class='P2AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P2AQ' class='P2AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -249,7 +250,7 @@
     <div class = 'Patient3A'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
-            <p>Patient <b>Clara</b>, 65-year-old caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the next year is <b>60.5%</b>.</p>
+            <p>Patient <b>Clara</b>, 65-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
                 The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
             <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
@@ -262,7 +263,7 @@
                             <input type='radio' name='P3AQ' class='P3AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P3AQ' class='P3AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P3AQ' class='P3AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3AQ' class='P3AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P3AQ' class='P3AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -271,7 +272,7 @@
     <div class = 'Patient4A'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
-            <p>Patient <b>Drew</b>, a 70-year-old non-caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the next year is <b>72.0%</b>.</p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
                 The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
@@ -284,7 +285,7 @@
                             <input type='radio' name='P4AQ' class='P4AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P4AQ' class='P4AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P4AQ' class='P4AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4AQ' class='P4AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P4AQ' class='P4AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -295,7 +296,7 @@
     <div class = 'Patient1B' class = 'P1B'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
-            <p>Patient <b>Adam</b>, 43-year-old caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the next year is <b>15.9%</b>.</p>
+            <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
             <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
             The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
             <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
@@ -330,7 +331,7 @@
                     <input type='radio' name='P1BQ' class='P1BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                     <input type='radio' name='P1BQ' class='P1BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                     <input type='radio' name='P1BQ' class='P1BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                    <input type='radio' name='P1BQ' class='P1BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                     <input type='radio' name='P1BQ' class='P1BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                     <button class = 'patientFormButton'>Next</button>
         </div>
@@ -340,7 +341,7 @@
     <div class = 'Patient2B'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
-            <p>Patient <b>Betty</b>, 86-year-old non-caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the next year is <b>83.5%</b>.</p>
+            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
             The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
@@ -375,7 +376,7 @@
                             <input type='radio' name='P2BQ' class='P2BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P2BQ' class='P2BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P2BQ' class='P2BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2BQ' class='P2BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P2BQ' class='P2BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -384,7 +385,7 @@
     <div class = 'Patient3B'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
-            <p>Patient <b>Clara</b>, 54-year-old caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the next year is <b>60.5%</b>.</p>
+            <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
                 The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
             <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
@@ -419,7 +420,7 @@
                             <input type='radio' name='P3BQ' class='P3BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P3BQ' class='P3BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P3BQ' class='P3BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3BQ' class='P3BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P3BQ' class='P3BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -428,7 +429,7 @@
     <div class = 'Patient4B'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
-            <p>Patient <b>Drew</b>, a 70-year-old non-caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the next year is <b>72.0%</b>.</p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
                 The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
@@ -460,7 +461,7 @@
                             <input type='radio' name='P4BQ' class='P4BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P4BQ' class='P4BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P4BQ' class='P4BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4BQ' class='P4BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P4BQ' class='P4BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -471,7 +472,7 @@
     <div class = 'Patient1C' class = 'P1C'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
-            <p>Patient <b>Adam</b>, 43-year-old caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the next year is <b>15.9%</b>.</p>
+            <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
             <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
             The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
             <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
@@ -512,7 +513,7 @@
                     <input type='radio' name='P1CQ' class='P1CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                     <input type='radio' name='P1CQ' class='P1CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                     <input type='radio' name='P1CQ' class='P1CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                     <input type='radio' name='P1CQ' class='P1CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                     <button class = 'patientFormButton'>Next</button>
         </div>
@@ -522,7 +523,7 @@
     <div class = 'Patient2C'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
-            <p>Patient <b>Betty</b>, 86-year-old non-caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the next year is <b>83.5%</b>.</p>
+            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
             The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
@@ -563,7 +564,7 @@
                             <input type='radio' name='P2CQ' class='P2CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P2CQ' class='P2CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P2CQ' class='P2CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P2CQ' class='P2CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -572,7 +573,7 @@
     <div class = 'Patient3C'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
-            <p>Patient <b>Clara</b>, 54-year-old caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the next year is <b>60.5%</b>.</p>
+            <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
                 The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
             <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
@@ -582,7 +583,7 @@
     
             <button class = 'P3CButton'>Interact with Decision Support System</button>
             <div class = 'Patient3CDSS' class = 'P3C'>
-                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <p>Examine how the following factors might impact Clara's predicted risk score, based on the Neural Network model utilized:</p>
                 <select class = 'P3CS1'>
                         <option value='0'>Smoker</option>
                         <option value='1'>Non-smoker</option>
@@ -613,7 +614,7 @@
                             <input type='radio' name='P3CQ' class='P3CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P3CQ' class='P3CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P3CQ' class='P3CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P3CQ' class='P3CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -622,17 +623,17 @@
     <div class = 'Patient4C'>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
-            <p>Patient <b>Drew</b>, a 70-year-old non-caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the next year is <b>72.0%</b>.</p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
                 The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
             His sodium level is 131, and creatine is 135.</p>-->
             <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
-            <p>Drew is diabetic, but a non-smoker.</p>
+            <p>Drew is diabetic, but Drew does does not effectively manage his diabetes. He is a non-smoker.</p>
     
             <button class = 'P4CButton'>Interact with Decision Support System</button>
             <div class = 'Patient4CDSS' class = 'P4C'>
-                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <p>Examine how the following factors might impact Drew's predicted risk score, based on the Neural Network model utilized:</p>
                 <select class = 'P4CS1'>
                         <option value='0'>Diabetes - unmanaged</option>
                         <option value='1'>Diabetes - managed</option>
@@ -660,7 +661,7 @@
                             <input type='radio' name='P4CQ' class='P4CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
                             <input type='radio' name='P4CQ' class='P4CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P4CQ' class='P4CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
                             <input type='radio' name='P4CQ' class='P4CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
@@ -671,9 +672,9 @@
  </div>
 
 <div class='rateML'>
-    <h3>Part 3: Reflection</h3>
+    <h2>Part 3: Reflection</h2>
     <p>Based on both the Model Information seen in Part 1 and the patient scenarios seen in Part 2, please answer the following:</p>
-    <p><b>Do you feel that the neural network model presented augments your judgement and constitutes a valuable contribution to decision-support systems?</b></p>
+    <p><b>Do you feel that the neural network model presented, which was used to power a decision-support system, augments your judgement and constitutes a valuable contribution to medical decision-making processes?</b></p>
     <div class = 'rateForm'>
         <input type='radio' class='rateML' name='rateML' value=0>Yes<br>
         <input type='radio' class='rateML' name='rateML' value=0>No<br><br>
@@ -686,13 +687,13 @@
 </div>
 
  <div class = 'commentSection'>
-    <h3>Comments</h3>
+    <h2>Part 4: Comments</h2>
     <p>Please leave any feedback, comments, or concerns about the survey you have just completed.</p>
     <p>In particular, you may address the following:
         <ul>
             <li>What are your general thoughts of Machine Learning in decision-support systems for prognostic predictive purposes?</li>
             <li>Was any of the model evidence and other information shown in Part 1 particularly effective or ineffective? Why?</li>
-            <li>Were the patient scenarios helpful in developing your confidence in the underlying model? Why or why not?</li>
+            <li>Were the patient scenarios shown in Part 2 helpful in developing your confidence in the underlying model and system? Why or why not?</li>
             <li>Were there any areas of the survey you felt were confusing or potentially misleading?</li>
         </ul>
     </p>
@@ -706,9 +707,9 @@
  </div>
 
  <div class = 'finished'>
-     <h3>Finished!!!</h3>
+     <h2>Finished!!!</h2>
     <p>
-        Thank you very much for taking our survey. Your anonymous results will be used as part of a statistical and ML analysis to determine the best evidence to present to potential users of ML models.<br/>
+        Thank you very much for taking our survey. Your anonymous results will be used as part of a statistical and ML analysis to determine the best evidence to present to potential users of decision-support systems that rely on sophisticated ML models.<br/>
         We trust that your efforts will be highly significant in helping design Decision-Support systems for prognostic predictions based on Machine Learning models that are useful and make valuable contributions to prognostics and medicine in general.
         Thank you!
     </p>
@@ -833,16 +834,16 @@
 
         //Code to reset probs when we're testing something new - comment out
 
-        //returnData = 
-        //            {
-        //                name:'X',
-        //                data:sequenceData,
-        //                accessCount:0
-        //            };
-        //            console.log(returnData);
+        returnData = 
+                    {
+                        name:'X',
+                        data:sequenceData,
+                        accessCount:0
+                    };
+                    console.log(returnData);
         
-        //            //Log the updates
-        //            dbRefProbs.set(returnData); 
+                    //Log the updates
+                    dbRefProbs.set(returnData); 
 
         dbRefProbs.once('value', (response) => {
             
@@ -929,14 +930,6 @@
 
                 for(d in contextData)
                 {
-                    //if(d == 0)
-                    //{
-                        //Part 1:
-                     //   newContextData.push(contextData[d]);
-                    //}
-                   // else
-                    //{
-                        //Part 2:
 
                         if(d == 0)  
                         {
@@ -994,7 +987,6 @@
 
                         upSect = {possibleSequences:upPossSeq, section:2};
                         newContextData.push(upSect);
-                    //}
                 }
                 newProbD = {context:0, contextCounter : upAccesses, contextData : newContextData};
 
@@ -1595,7 +1587,7 @@
         
 
         //Move to Part 2:
-        $('.IntroPart2').on('click', function() {
+        $('.StartPart2').on('click', function() {
             $('.IntroPart2').hide();
 
             part2Seq = seqToRun[userContext][Part1Length];
@@ -1642,6 +1634,7 @@
                     var dbRefProbs = firebase.database().ref('Probs');
 
                     $('.patient'+patientsSeen+part2Seq).hide();
+                    $('.Part2').hide()
                     $('.rateML').show();
                 }
         }
