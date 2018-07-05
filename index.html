@@ -69,7 +69,7 @@
         <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
         <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your comprehension of, and confidence in, the decision-support system based on it.</p>
         <p>Click 'Next' to proceed</p>
-        <button class='StartPart1'>Next</button>
+        <button class='StartPart1Button'>Next</button>
  </div>
 
  <div class = 'Part1'>
@@ -160,7 +160,7 @@
                 <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
                 <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
                 <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
-                <p>Click elow for a summary of the depth-3 trees for each local linear model:</p>
+                <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
                 <button class = 'treeButton'>Show Decision Trees</button>
                 <div class = 'hideTree'>
                     <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
@@ -795,33 +795,6 @@
                     ]
                 }
             ]
-        },
-        {
-            context : 2,
-            contextCounter : 0,
-            contextData : 
-            [
-            {
-                section: 1, possibleSequences:[
-                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
-                    ]
-                },
-                {
-                    section: 2, possibleSequences:[
-                        {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10}
-
-                    ]
-                }
-            ]
         }
     ];
 
@@ -923,7 +896,7 @@
 
         for(ctxt in currentSequences)
         {
-            if(currentSequences[ctxt].context == 0)
+            if(currentSequences[ctxt].context == userContext)
             {
                 ctxtContent = currentSequences[ctxt];
                 upAccesses = ctxtContent.contextCounter + 1;
@@ -1511,9 +1484,6 @@
             //Prevent page from refreshing
             e.preventDefault();
 
-            //Register context as 0 (medical expert)
-            userContext = 0;
-
             //Hide Start section
             $('.startQuiz').hide();
             
@@ -1523,7 +1493,7 @@
         });
 
         //Start Part 1:
-        $('.IntroPart1').on('click', function() {
+        $('.StartPart1Button').on('click', function() {
             $('.IntroPart1').hide();
             $('.Part1').show();
             $('.Evidence1').show();
