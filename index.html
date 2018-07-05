@@ -160,8 +160,11 @@
                 <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
                 <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
                 <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
-                <p>Below is a summary of the depth-3 trees for each local linear model:</p>
-                <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
+                <p>Click elow for a summary of the depth-3 trees for each local linear model:</p>
+                <button class = 'treeButton'>Show Decision Trees</button>
+                <div class = 'hideTree'>
+                    <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
+                </div>
                 <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E5Q' class='evForm'>
@@ -227,7 +230,7 @@
 
     <div class = 'Patient2A'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Betty.png" style="width:75px;"></p>
             <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
             The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
@@ -249,7 +252,7 @@
 
     <div class = 'Patient3A'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Clara.png" style="width:100px;"></p>
             <p>Patient <b>Clara</b>, 65-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
                 The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
@@ -271,7 +274,7 @@
 
     <div class = 'Patient4A'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Drew.png" style="width:75px;"></p>
             <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
                 The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
@@ -384,7 +387,7 @@
 
     <div class = 'Patient3B'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Clara.png" style="width:100px;"></p>
             <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
                 The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
@@ -428,7 +431,7 @@
 
     <div class = 'Patient4B'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Drew.png" style="width:75px;"></p>
             <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
                 The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
@@ -522,7 +525,7 @@
 
     <div class = 'Patient2C'>
             <p>Please examine the following patient:</p>
-            <p style="text-align:center;"><img src="Betty.png" style="width:50px;"></p>
+            <p style="text-align:center;"><img src="Betty.png" style="width:75px;"></p>
             <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
             The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
@@ -1061,6 +1064,7 @@
         $('.Evidence3').hide();
         $('.Evidence4').hide();
         $('.Evidence5').hide();
+        $('.hideTree').hide();
         $('.EvidenceFinal').hide();
 
         $('.IntroPart2').hide();
@@ -1132,6 +1136,11 @@
         //Show full survey details
         $('.showStudyInfo').on('click', function() {
             $('.studyInfo').toggle();
+        })
+
+        //Show full survey details
+        $('.treeButton').on('click', function() {
+            $('.hideTree').toggle();
         })
 
         //Button Toggles
