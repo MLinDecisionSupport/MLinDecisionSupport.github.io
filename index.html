@@ -88,14 +88,103 @@
             <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
             <li><b>New York Heart Association Score</b> (Class I-IV)</li>
         </ul>
+        <hr style="border-top: dotted 1px;" />
         <div class = 'E1Q' class='evForm'>
                 <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: Not useful - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: Somewhat useful - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: Very useful - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
                 <button class = 'evFormButton'>Next</button>
         </div>
     </div>
+
+    <div class = 'Evidence2'>
+            <h3>Model Training and Implementation</h3>
+            <p>The model utilized was a <b>Neural Network</b>, a sophisticated deep learning method that has seen increased attention in recent years, as multiple studies have shown to vastly outperform simpler linear models that have been traditionally used to generate risk scores in medicine.</p>
+            <p>A neural network is a machine learning algorithm inspired by the human brain, utilizing connected nodes organized in hidden layers. The network uses optimization techniques and non-linear activation functions to automatically discover complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
+            <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
+            <p>The network takes in a large amount of data, in the form of patient characteristics, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
+            <p>The Neural Network we utilized contained 2 hidden laters of 100 and 20 nodes each. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
+            <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run.</p>
+            <hr style="border-top: dotted 1px;" />
+            <div class = 'E2Q' class='evForm'>
+                    <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                    <button class = 'evFormButton'>Next</button>
+            </div>
+        </div>
+
+        <div class = 'Evidence3'>
+                <h3>Model Accuracy</h3>
+                <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
+                <p>The model's AUC-ROC (receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a stadnard deviation of 0.0054, averaged over 10 runs.<br/>This value is much higher than the best linear regression model, which achieves AUC-ROC of 0.537. It is also significantly higher than the AUC-ROC of the MAGGIC Risk Score, which is 0.6933. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>.</p>
+                <p>The model's ROC curve is below:</p>
+                <p style="text-align:center;"><img src="NNROC.png" style="width:250px;"></p>
+                <p>In addition, the model achieves an AUC-PR (precision recall curve) of <b>0.376</b>, higher than a Linear Regression model (0.250) and the MAGGIC Risk Score (0.342). For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>. </p>
+                <p>These metrics showcase the neural network model's high accuracy, especially when compared with alternative, simpler statistical models, and established risk scores.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E3Q' class='evForm'>
+                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+            </div>
+
+        <div class = 'Evidence4'>
+                <h3>Model Interpretation: Stratified Linear Approximation</h3>
+                <p>Black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, like linear regression models.</p>
+                <p>To create local approximations, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+                <p>The Root Mean-Sqaured Error between the neural network model and the linear approximation is 0.036, suggesting the 2 models are very close.</p>
+                <p>Below is a summary of the coefficients for each local linear model:</p>
+                <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
+                <p>The value of each coefficient represents their contribution to the variability in predicted patient risk score.</p>
+                <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E4Q' class='evForm'>
+                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+        </div>
+
+        <div class = 'Evidence5'>
+                <h3>Model Interpretation: Decision Tree</h3>
+                <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, like decision trees.</p>
+                <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+                <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
+                <p>Below is a summary of the depth-3 trees for each local linear model:</p>
+                <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
+                <p>Note that each risk stratum utilizes different patient charactertistics for classification. Few patients are classified in the 80-100% class.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E5Q' class='evForm'>
+                        <p>How useful do you find this information about the model used to generate a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+        </div>
+
+        <div class = 'EvidenceFinal'>
+                <h4>Rate your confidence</h4>
+                <p>Please consider the following question based on <b>all</b> the Model information and evidence seen so far:</p>
+                <div class = 'EFinal' class='evForm'>
+                        <p>Based on the information seen so far, how would you rate your confidence in the machine learning model and the decision-support system based on it?</p>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=0> 1: <b>Not at all confident</b>, would not even consider looking at the model and its prediction as part of my decision-making process<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=1> 2: <b>Not very confident</b>, unlikely to consider model<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=2> 3: <b>Somewhat confident</b>, may consult model but unlikely to rely on it in any way <br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=3> 4: <b>Fairly confident</b>, likely to consult model and consider its predicted score<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=4> 5: <b>Very confident</b>, almost certain to consult model together with other tools when considering further medical decisions <br><br> 
+                        <button class = 'evFinalButton'>Next</button>
+                </div>
+        </div>
 
 </div>
 
@@ -123,14 +212,14 @@
         His sodium level is 145, and creatine is 64.</p>-->
         <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
         <p>Adam admits to being an occasional smoker. He does not suffer from diabetes.</p>
-
+        <hr style="border-top: dotted 1px;" />
         <div class = 'P1AQ' class='patientForm'>
                 <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                        <input type='radio' name='P1AQ' class='P1AQ' class='patientForm' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                         <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -145,14 +234,14 @@
             Her sodium level is 138, and creatine is 132.6.</p>-->
             <p>Betty has not been prescribed either ACE inhibitors or Beta blockers.</p>
             <p>Betty does not smoke, and does not suffer from diabetes. She does suffer from angina.</p>
-    
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P2AQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P2AQ' class='P2AQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P2AQ' class='P2AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P2AQ' class='P2AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P2AQ' class='P2AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P2AQ' class='P2AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2AQ' class='P2AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -167,14 +256,14 @@
             Her sodium level is 138, and creatine is 107.</p>-->
             <p>Clara has been prescribed ACE inhibitors.</p>
             <p>Clara is diabetic, and smokes regularly.</p>
-    
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P3AQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P3AQ' class='P3AQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P3AQ' class='P3AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P3AQ' class='P3AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P3AQ' class='P3AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P3AQ' class='P3AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3AQ' class='P3AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -189,14 +278,14 @@
             His sodium level is 131, and creatine is 135.</p>-->
             <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
             <p>Drew is diabetic, but a non-smoker.</p>
-    
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P4AQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P4AQ' class='P4AQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P4AQ' class='P4AQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P4AQ' class='P4AQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P4AQ' class='P4AQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P4AQ' class='P4AQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4AQ' class='P4AQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -235,14 +324,14 @@
             <div class = 'P1BP5' class = 'P1BP'>12.2%</div>
             <div class = 'P1BP6' class = 'P1BP'>12.6%</div>
         </div>
-
+        <hr style="border-top: dotted 1px;" />
         <div class = 'P1BQ'>
             <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                    <input type='radio' name='P1BQ' class='P1BQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                    <input type='radio' name='P1BQ' class='P1BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <input type='radio' name='P1BQ' class='P1BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <input type='radio' name='P1BQ' class='P1BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                    <input type='radio' name='P1BQ' class='P1BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                    <input type='radio' name='P1BQ' class='P1BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                     <button class = 'patientFormButton'>Next</button>
         </div>
 
@@ -280,14 +369,14 @@
                 <div class = 'P2BP5' class = 'P2BP'>61.7%</div>
                 <div class = 'P2BP6' class = 'P2BP'>62.3%</div>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P2BQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P2BQ' class='P2BQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P2BQ' class='P2BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P2BQ' class='P2BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P2BQ' class='P2BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P2BQ' class='P2BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2BQ' class='P2BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -324,14 +413,14 @@
                 <div class = 'P3BP5' class = 'P3BP'>54.6%</div>
                 <div class = 'P3BP6' class = 'P3BP'>54.9%</div>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P3BQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P3BQ' class='P3BQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P3BQ' class='P3BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P3BQ' class='P3BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P3BQ' class='P3BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P3BQ' class='P3BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3BQ' class='P3BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -365,14 +454,14 @@
                 <div class = 'P4BP3' class = 'P4BP'>77.8%</div>
                 <div class = 'P4BP4' class = 'P4BP'>73.9%</div>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P4BQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P4BQ' class='P4BQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P4BQ' class='P4BQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P4BQ' class='P4BQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P4BQ' class='P4BQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P4BQ' class='P4BQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4BQ' class='P4BQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -417,14 +506,14 @@
         <div class=P1CO>
             <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
         </div>
-
+        <hr style="border-top: dotted 1px;" />
         <div class = 'P1CQ'>
             <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                    <input type='radio' name='P1CQ' class='P1CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                    <input type='radio' name='P1CQ' class='P1CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                    <input type='radio' name='P1CQ' class='P1CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                     <button class = 'patientFormButton'>Next</button>
         </div>
 
@@ -468,14 +557,14 @@
             <div class=P2CO>
                 <p><i>Patient Betty unfortunately passed away 3 months following her heart failure event.</i></p>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P2CQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P2CQ' class='P2CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P2CQ' class='P2CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P2CQ' class='P2CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -518,14 +607,14 @@
             <div class=P3CO>
                 <p><i>Patient Clara was alive one year after her heart failure event. However, she passed away 2 years later.</i></p>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P3CQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P3CQ' class='P3CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P3CQ' class='P3CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P3CQ' class='P3CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -565,14 +654,14 @@
             <div class=P4CO>
                 <p><i>One year after his heart failure event, Patient Drew was alive. He unfortunately passed away 16 months following his heart failure event.</i></p>
             </div>
-
+            <hr style="border-top: dotted 1px;" />
             <div class = 'P4CQ'>
                     <p>Based on the information seen so far, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=0> 1: Completely unsatisfied, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=1> 2: Fairly unsatisfied, not likely to use the system<br>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=2> 3: Neither satisfied nor unsatisfied, may or may not consult system<br>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=3> 4: Somewhat satisfied, likely to at least take a look at the system's prediction<br>
-                            <input type='radio' name='P4CQ' class='P4CQ' value=4> 5: Highly satisfied, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P4CQ' class='P4CQ' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's prediction<br>
+                            <input type='radio' name='P4CQ' class='P4CQ' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -585,13 +674,13 @@
     <h3>Part 3: Reflection</h3>
     <p>Based on both the Model Information seen in Part 1 and the patient scenarios seen in Part 2, please answer the following:</p>
     <p><b>Do you feel that the neural network model presented augments your judgement and constitutes a valuable contribution to decision-support systems?</b></p>
-    <form class = 'rateForm'>
+    <div class = 'rateForm'>
         <input type='radio' class='rateML' name='rateML' value=0>Yes<br>
         <input type='radio' class='rateML' name='rateML' value=0>No<br><br>
         Please explain why or why not:
         <textarea comments cols=100 rows=5 placeholder='Details...' class = 'RateMLText' name='RateMLText'></textarea>
         <button class = 'ReflectButton'>Next</button>
-    </form>
+    </div>
     <br />
     
 </div>
@@ -647,214 +736,8 @@
 
 <!--Actual code-->
   <script>
-    //Setup variables:
-
     
-    var part1 = {
-        header : '<b>Part 2:</b> Linear Regression Model',
-        description : '<p>The following questions pertain to a <b>Linear regression</b> model, a well-known model historically utilized to generate medical risk scores by statistically estimating coefficients for patient features. The model was trained on a Heart Failure dataset with over 30,000 patients, and utilizes several features to predict the event that a patient suffering heart failure will die within one year.</p><p>Please examine the following scenario and relevant evidence in order and assess your level of confidence in the model after each step.</p>',
-        questions : [
-            {
-                questionText : '<image src="S0Q0O0.png" style="width:700px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear Regression</a></p><br/><p>Given the above only, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S0Q1O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S0Q1O1.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S0Q2O0.png" style="width:1000px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-Validation</a><br/><a href="http://www.statisticshowto.com/c-statistic/">C-Statistic</a></p><br/><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S0Q2O1.png" style="width:1000px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-Validation</a><br/><a href="http://www.statisticshowto.com/c-statistic/">C-Statistic/AUC-ROC</a><br/><a href="https://en.wikipedia.org/wiki/F1_score">F1 Score</a><br/><a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision and Recall</a></p><br/><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S0Q3O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 27.6% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            }
-        ]
-    };
-
-    var part2 = {
-        header : '<b>Part 3:</b> Neural Network',
-        description : '<p>The following questions pertain to a <b>neural network</b>, a sophisticated black-box machine learning model. The model was trained on the same Heart Failure dataset and utilizes several features to predict the event that a patient suffering heart failure will die within one year.</p><p>Please examine the following scenario and relevant evidence in order and assess your level of confidence in the model after each step.</p>',
-        questions : [
-            {
-                questionText : '<image src="S1Q0O0.png" style="width:700px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Neural_network">Neural Network</a></p><br/><p>Given the above only, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q1O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q2O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q2O1.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q3O0.png" style="width:1000px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Decision_tree_learning">Decision Tree</a></p><br/><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q3O1.png" style="width:1000px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Decision_tree_learning">Decision Tree</a></p><br/><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S1Q4O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk scores to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            }
-        ]
-    };
-
-    var part3 = {
-        header : '<b>Part 4:</b> Random Forest',
-        description : '<p>The following questions pertain to a <b>random forest</b>, a black-box machine learning algorithm that utilizes multiple decision trees. The model was trained on the same Heart Failure dataset and utilizes several features to predict the event that a patient suffering heart failure will die within one year.</p><p>Please examine the following scenario and relevant evidence in order and assess your level of confidence in the model after each step.</p>',
-        questions : [
-            {
-                questionText : '<image src="S2Q0O0.png" style="width:700px;"></image><p><h4>For more information:</h4><a href="https://en.wikipedia.org/wiki/Random_forest">Random Forest</a></p><br/><p>Given the above only, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q1O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q2O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q3O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q4O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q4O1.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            },
-            {
-                questionText : '<image src="S2Q5O0.png" style="width:1000px;"></image><p>Given the above and previous information, how confident would you feel using the results of the model and the predicted risk score of 63.8% to inform medical actions?</p>',
-                answers: ['Not at all confident, would not even consider looking at model and its prediction when deciding on further action',
-                            'Not very confident, unlikely to consider model',
-                            'Somewhat confident, may consult model but unlikely to rely on it in any way',
-                            'Fairly confident, likely to consult model and consider its predicted score',
-                            'Very confident, almost certain to consult model together with other tools when considering further actions'
-                ]
-            }
-        ]
-    };
-
-    var parts = [part1, part2, part3];
-
-    //var answerKey = [0,2];
-
+    //Setup Sequence:
     var sequenceData = [
         {
             context : 0,
@@ -863,14 +746,14 @@
             [
                 {
                     section: 1, possibleSequences:[
-                        {seqCode:'S0U0', seq: [1,1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U1', seq: [1,1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U2', seq: [1,0,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U3', seq: [1,0,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U4', seq: [1,1,0,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U5', seq: [1,1,0,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U6', seq: [1,0,1,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U7', seq: [1,0,1,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 },
                 {
@@ -889,20 +772,22 @@
             [
             {
                     section: 1, possibleSequences:[
-                        {seqCode:'S0U0', seq: [1,1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U1', seq: [1,1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U2', seq: [1,0,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U3', seq: [1,0,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U4', seq: [1,1,0,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U5', seq: [1,1,0,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U6', seq: [1,0,1,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U7', seq: [1,0,1,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 },
                 {
                     section: 2, possibleSequences:[
                         {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10}
+
                     ]
                 }
             ]
@@ -913,103 +798,30 @@
             contextData : 
             [
             {
-                    section: 1, possibleSequences:[
-                        {seqCode:'S0U0', seq: [1,1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U1', seq: [1,1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U2', seq: [1,0,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U3', seq: [1,0,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U4', seq: [1,1,0,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U5', seq: [1,1,0,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U6', seq: [1,0,1,0,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'S0U7', seq: [1,0,1,0,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                section: 1, possibleSequences:[
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 },
                 {
                     section: 2, possibleSequences:[
                         {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10}
+
                     ]
                 }
             ]
         }
     ];
 
-
-    var questionCounter = 0;
-    var sectionCounter = 0;
-    var numContexts = 0;
-
-    //Create function to display a question:
-    function displayQuestion(qNum, q)
-    {
-        var output = [];
-        var answersList = [];
-
-        //Setup answers one by one
-        for(ans in q.answers)
-        {
-            ansNum = parseInt(ans) + 1;
-
-            answersList.push(
-                '<label class="question question'+qNum+'">'
-					+ '<input type="radio" name="question'+qNum+'" class="question'+qNum+'" value="'+ans+'">'
-					+ (ansNum) + ': '
-					+ q.answers[ans]
-				+ '</label><br />'
-			    );
-		}
-
-        //Push question text and answers
-        output.push(
-			'<div class="question question'+qNum+'">' + q.questionText + '<br />'
-			+ '<div class="answers">' + answersList.join('') + '<br /></div>'
-            + '<div value="'+qNum+'" class="button question question'+qNum+'"><button>Next</button></div></div>'
-		);
-        //console.log(output)
-
-        //Add output to current HTML
-        return output;
-    }
-
-    function displaySection(sectionNum,section)
-    {
-        output = [];
-        questionList = [];
-
-        //Display ALL questions (we'll hide them later)
-        for(var q=0; q<section.questions.length; q++)
-        {
-           questionList.push(displayQuestion(questionCounter,section.questions[q]));
-           questionCounter++;
-        }
-        
-        //Add question list to output and return
-        output.push(
-            '<div class="section section'+sectionNum+'"><h3>' 
-            + section.header 
-            +'</h3><p>'
-            + section.description
-            + '</p>'
-            + '<div class="questions">' + questionList.join('') + '</div></div>'
-        );
-
-        return output;
-    }
-
-    function displayAll(sectionList)
-    {
-        output = ''
-        for(var s = 0; s<sectionList.length;s++)
-        {
-            output = output+displaySection(sectionCounter,sectionList[s]);
-            sectionCounter++;
-        }
-        return output
-    }
-
     var dbAccesses = 1;
-    var dbSeqData;
-
 
     //Function to choose, based on UCB, which sequence to show
     function chooseSequence()
@@ -1021,16 +833,16 @@
 
         //Code to reset probs when we're testing something new - comment out
 
-        returnData = 
-                    {
-                        name:'X',
-                        data:sequenceData,
-                        accessCount:0
-                    };
-                    console.log(returnData);
+        //returnData = 
+        //            {
+        //                name:'X',
+        //                data:sequenceData,
+        //                accessCount:0
+        //            };
+        //            console.log(returnData);
         
-                    //Log the updates
-                    dbRefProbs.set(returnData); 
+        //            //Log the updates
+        //            dbRefProbs.set(returnData); 
 
         dbRefProbs.once('value', (response) => {
             
@@ -1101,124 +913,8 @@
 
     //Function to update UCB once survey is done
 
-    function updateUBC(resultList, initialSeqData, runSummary, numAccess)
+    function updateUCB(currentSequences)
     {
-        console.log('UBC Update Step initiate!');
-        console.log(initialSeqData);
-
-        //Update total number of accesses
-        upAccesses = numAccess + 1;
-        upSeqData = [];
-        upContextCount = 0;
-
-        for (var ctxt = 0; ctxt < initialSeqData.length; ctxt++)
-        {
-            currentData = initialSeqData[ctxt];
-
-            if (ctxt != userContext)
-            {
-                upSeqData.push(currentData);
-            }
-
-            else
-            {
-                console.log('hit context '+ctxt)
-                //Set up the updated sequence data vector to return.
-                //Section0, the context question, always remains the same:
-                qSoFar = 0;
-
-                upContextCount = currentData.contextCounter + 1;
-                currentData = currentData.contextData;
-                contextUpSeqData = [];
-
-                //For every section
-                for(var a = 0; a < currentData.length; a++)
-                {
-                    sectData = currentData[a];
-                    //console.log('sectData');
-                    //console.log(sectData);
-
-                    //Find the final confidence score in the model (that's our reward):
-                    qSoFar = qSoFar + sectData.possibleSequences[0].seq.length
-                    confScore = resultList[qSoFar-1];
-                    wloop = qSoFar - 2;
-                    while(confScore == -1 && qSoFar >= 0)
-                    {
-                        confScore = resultList[wloop];
-                        wloop = wloop - 1;
-                    }
-
-                    //console.log('score?');
-                    //console.log(confScore);
-
-                    ranCode = runSummary[userContext].seqData[a].seqCode;
-                    //console.log(ranCode);
-
-                    upPossSeq = [];
-
-                    //For each possible sequence:
-                    for (var b = 0; b < sectData.possibleSequences.length; b++)
-                    {
-                        curSeq = sectData.possibleSequences[b];
-
-                        //If we're at the sequence we ran, we must update many things:
-                        if (curSeq.seqCode == ranCode)
-                        {
-                            upTries = curSeq.numTries + 1;
-                            upMean = ((curSeq.currentMean*curSeq.numTries) + parseInt(confScore))/upTries;
-                            upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
-
-                            //Check for NaN:
-                            if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
-                        }
-                        else
-                        {
-                            upTries = curSeq.numTries;
-                            upMean = curSeq.currentMean;
-                            upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
-
-                            //Check for NaN:
-                            if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
-                        }
-
-                        upSeq = {
-                            seqCode : curSeq.seqCode,
-                            seq : curSeq.seq,
-                            numTries : upTries,
-                            currentMean : upMean,
-                            currentUCB : upUCB
-                        };
-
-                        //console.log('upSeq');
-                        //console.log(upSeq);
-
-                        upPossSeq.push(upSeq);
-                    }
-
-                    upSect = {section:a, possibleSequences:upPossSeq};
-                    contextUpSeqData.push(upSect);
-                    //console.log('upSect')
-                    //console.log(upSect)
-                    //console.log(contextUpSeqData)
-                }
-
-                upSeqData.push({context: ctxt, contextCounter : upContextCount, contextData: contextUpSeqData});                
-
-            }
-
-            
-        }
-        console.log('Updated UCB Values: ')
-        console.log(upSeqData);
-        return upSeqData;
-    }
-
-
-    function updateUCBPart2(currentSequences)
-    {
-        console.log('Lets update UCB Part 2');
-        console.log(currentSequences);
-
         probDataToReturn = [];
 
         for(ctxt in currentSequences)
@@ -1233,12 +929,26 @@
 
                 for(d in contextData)
                 {
-                    if(d == 0)
-                    {
-                        newContextData.push(contextData[d]);
-                    }
-                    else
-                    {
+                    //if(d == 0)
+                    //{
+                        //Part 1:
+                     //   newContextData.push(contextData[d]);
+                    //}
+                   // else
+                    //{
+                        //Part 2:
+
+                        if(d == 0)  
+                        {
+                            newAns = parseInt(part1FinalAns);
+                            seqCheck = part1Seq;
+                        }
+                        else        
+                        {
+                            newAns = parseInt(part2FinalAns);
+                            seqCheck = 'Part2'+part2Seq;
+                        }
+
                         ctxtValues = contextData[d].possibleSequences;
                         //console.log(ctxtValues);
 
@@ -1247,11 +957,15 @@
                         for(v in ctxtValues)
                         {
                             curSeq = ctxtValues[v];
-                        //Update the sequence we're actually at:
-                            if(curSeq.seq[0] == part2Seq)
+                            //console.log('curSeq')
+                            //console.log(curSeq);
+
+                            //Update the sequence we're actually at:
+                            if(curSeq.seqCode == seqCheck)
                             {
+                                
                                 upTries = curSeq.numTries + 1;
-                                upMean = ((curSeq.currentMean*curSeq.numTries) + part2FinalAns)/upTries;
+                                upMean = ((curSeq.currentMean*curSeq.numTries) + newAns)/upTries;
                                 upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
 
                                 //Check for NaN:
@@ -1280,7 +994,7 @@
 
                         upSect = {possibleSequences:upPossSeq, section:2};
                         newContextData.push(upSect);
-                    }
+                    //}
                 }
                 newProbD = {context:0, contextCounter : upAccesses, contextData : newContextData};
 
@@ -1304,37 +1018,40 @@
     whys = [];
     rating = {};
     var initialSeqData;
+    var part1Seq;
     var part2Seq;
+    part1Ans = [];
     part2Ans = [];
+    var part1FinalAns;
     var part2FinalAns;
     seqToRun = [];
     runSummary = [];
+    Part1Length = 5;
+    evidenceSeen = 0;
+    TotalNumPatients = 4;
     patientsSeen = 0;
+
+    interactP1 = 0;
+    interactP2 = 0;
+    interactP3 = 0;
+    interactP4 = 0;
+    outcomeP1 = 0;
+    outcomeP2 = 0;
+    outcomeP3 = 0;
+    outcomeP4 = 0;
 
     //Set code to run once page is loaded
     $(document).ready(function() {
 
         //Prepare things to display:
-        var pageStuff = document.getElementById('Rest');
-        pageContent = displayAll(parts);
-        pageStuff.innerHTML = pageStuff.innerHTML + pageContent;
-
-        console.log(pageStuff.innerHTML);
-
+        
         //Figure out the sequence
         chooseSequence();
 
         //All the action starts here!
 
         //Variables:
-        interactP1 = 0;
-        interactP2 = 0;
-        interactP3 = 0;
-        interactP4 = 0;
-        outcomeP1 = 0;
-        outcomeP2 = 0;
-        outcomeP3 = 0;
-        outcomeP4 = 0;
+        
 
         //Hide all questions and sections:
         $('.question').hide();
@@ -1348,6 +1065,11 @@
         $('.IntroPart1').hide();
         $('.Part1').hide();
         $('.Evidence1').hide();
+        $('.Evidence2').hide();
+        $('.Evidence3').hide();
+        $('.Evidence4').hide();
+        $('.Evidence5').hide();
+        $('.EvidenceFinal').hide();
 
         $('.IntroPart2').hide();
         $('.Part2').hide();
@@ -1423,42 +1145,34 @@
         //Button Toggles
         $('.P1BButton').on('click', function() {
             $('.Patient1BDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P2BButton').on('click', function() {
             $('.Patient2BDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P3BButton').on('click', function() {
             $('.Patient3BDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P4BButton').on('click', function() {
             $('.Patient4BDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P1CButton').on('click', function() {
             $('.Patient1CDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P2CButton').on('click', function() {
             $('.Patient2CDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P3CButton').on('click', function() {
             $('.Patient3CDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P4CButton').on('click', function() {
             $('.Patient4CDSS').toggle();
-            interactP1 = 1;
         })
 
         $('.P1CButton2').on('click', function() {
@@ -1482,6 +1196,7 @@
         })        
 
         $('.P1BPButton').on('click', function() {
+            interactP1 = 1;
             $('.P1BP1').hide();
             $('.P1BP2').hide();
             $('.P1BP3').hide();
@@ -1522,6 +1237,7 @@
         })
 
         $('.P2BPButton').on('click', function() {
+            interactP2 = 1;
             $('.P2BP1').hide();
             $('.P2BP2').hide();
             $('.P2BP3').hide();
@@ -1562,6 +1278,7 @@
         })
 
         $('.P3BPButton').on('click', function() {
+            interactP3 = 1;
             $('.P3BP1').hide();
             $('.P3BP2').hide();
             $('.P3BP3').hide();
@@ -1602,6 +1319,7 @@
         })
 
         $('.P4BPButton').on('click', function() {
+            interactP4 = 1;
             $('.P4BP1').hide();
             $('.P4BP2').hide();
             $('.P4BP3').hide();
@@ -1632,6 +1350,7 @@
         })
 
         $('.P1CPButton').on('click', function() {
+            interactP1 = 1;
             $('.P1CP1').hide();
             $('.P1CP2').hide();
             $('.P1CP3').hide();
@@ -1672,6 +1391,7 @@
         })
 
         $('.P2CPButton').on('click', function() {
+            interactP2 = 1;
             $('.P2CP1').hide();
             $('.P2CP2').hide();
             $('.P2CP3').hide();
@@ -1712,6 +1432,7 @@
         })
 
         $('.P3CPButton').on('click', function() {
+            interactP3 = 1;
             $('.P3CP1').hide();
             $('.P3CP2').hide();
             $('.P3CP3').hide();
@@ -1752,6 +1473,7 @@
         })
 
         $('.P4CPButton').on('click', function() {
+            interactP4 = 1;
             $('.P4CP1').hide();
             $('.P4CP2').hide();
             $('.P4CP3').hide();
@@ -1804,28 +1526,82 @@
             $('.IntroPart1').hide();
             $('.Part1').show();
             $('.Evidence1').show();
+            evidenceSeen++;
+
+            part1Seq = runSummary[userContext].seqData[0].seqCode;
+
+            console.log('Part 1 sequence:')
+            console.log(part1Seq);
+            console.log(seqToRun[userContext].slice(0,Part1Length));
         })
 
         //Move through Part 1:
         $('.evFormButton').on('click',function(){
 
-            if($('.E1Q').is(':checked'))
+            //Only act if the current question has been answered:
+            if($('.E'+evidenceSeen+'Q').is(':checked'))
             {
-                $('.Evidence1').hide();
-                $('.IntroPart2').show();
+                //Keep track of where we are within Part 1:
+                currentEvidence = evidenceSeen;
+                evidenceSeen++;
+                $('.Evidence'+currentEvidence).hide();
 
-                $('.Part1').hide();
+                //Record current answer:
+                currentAns = $(':checked','.E'+currentEvidence+'Q').val();
+                part1Ans.push(currentAns);
+                console.log(part1Ans)
+
+                if(currentEvidence == Part1Length)
+                {
+                    //If we're at the end of Part1, move on
+                    $('.EvidenceFinal').show();
+                }
+
+                else
+                {
+                    while(seqToRun[userContext][evidenceSeen-1] != 1 && evidenceSeen < Part1Length+1)
+                    {
+                        evidenceSeen++;
+                        part1Ans.push(-1);
+                        console.log(evidenceSeen);
+
+                        if(evidenceSeen > Part1Length)
+                        {
+                            //If we're at the end of Part1, move on
+                            $('.EvidenceFinal').show();
+                        }
+                    }
+                    
+                    $('.Evidence'+evidenceSeen).show();
+
+                }
+                
             }
         })
 
+
+        //Finish Part 1:
+        $('.evFinalButton').on('click',function(){
+            if($('.EFinal').is(':checked'))
+            {
+                part1FinalAns = $(':checked','.EFinal').val();
+                console.log('Part 1 Rating:');
+                console.log(part1FinalAns);
+                $('.Part1').hide();
+                $('.EvidenceFinal').hide();
+                $('.IntroPart2').show();
+            }
+        })
+        
 
         //Move to Part 2:
         $('.IntroPart2').on('click', function() {
             $('.IntroPart2').hide();
 
-            part2Seq = seqToRun[userContext][6];
+            part2Seq = seqToRun[userContext][Part1Length];
             console.log('Part 2 Run Type:')
-            console.log(seqToRun[userContext][6]);
+            console.log(Part1Length+1)
+            console.log(seqToRun[userContext][Part1Length]);
 
             $('.Part2').show();
             $('.patient1'+part2Seq).show();
@@ -1846,7 +1622,7 @@
                 patientsSeen++;
                 part2Ans.push($(':checked','.'+q).val());
 
-                if(patientsSeen<4)
+                if(patientsSeen < TotalNumPatients)
                 {
                     $('.patient'+patientsSeen+part2Seq).hide();
                     nextPatient = patientsSeen+1;
@@ -1855,6 +1631,9 @@
 
                 else
                 {
+                    //Set up interaction record:
+                    interactionRecord = [interactP1, interactP2, interactP3, interactP4, outcomeP1, outcomeP2, outcomeP3, outcomeP4];
+
                     //Get final answer
                     part2FinalAns = $(':checked','.'+q).val();
                     console.log('Final:');
@@ -1869,342 +1648,31 @@
 
         });
 
-
-
-
-
-        //Keep track of what's been answered
-        var clicked = 0;
-        var questionsInSection = 0;
-        var sectionsPassed = 0;
-
-        //Display
-
-        //On click
-        $('.button').on('click', function() {
-
-            //Check if an option was selected - otherwise do nothing
-            if($('.question'+clicked).is(':checked'))
-            {
-                var foundNextQuestion = false;
-                var round = 0;
-
-                selectedAnswer = $(':checked','.question'+clicked).val();
-
-                //If we need to display a Why-Low (for medical only, not on first question of each section):
-                if(userContext == 0 && selectedAnswer < 2 && clicked != 0 && clicked != 6 && clicked != 13)
-                {
-
-                    console.log('WHY - Low')
-
-                    $('.question'+clicked).hide();
-                    $('.whyLow').attr('checked',false);
-                    $('.whyLow').show();
-
-                     $('.whyLow').on('submit', function(e){
-
-                        //Prevent page from refreshing
-                        e.preventDefault();
-
-                        $('.whyLow').hide();
-                        console.log($('input[name=whyLow]:checked').val());
-
-                        otherReason = '';
-
-                        if($('.whyLowOther').val() != '')
-                        {
-                            otherReason = $('.whyLowOther').val();
-                        }
-
-                        console.log(otherReason);
-
-                        $('.whyLowOther').val('');
-
-                        whys.push('Q'+clicked+'WL'+$('input[name=whyLow]:checked').val()+otherReason);
-
-                        //While we haven't settled on a question to display
-                        while(foundNextQuestion == false)
-                        {
-                            //Check which question and section we're in
-                            currentQuestion = '.question'+clicked;
-                            currentSection = '.section'+sectionsPassed;
-
-                            //Get the answer, if the user just answered. Otherwise log -1:
-                            if(round == 0)
-                            {
-                                userAnswer = selectedAnswer;
-                            }
-                            else
-                            {
-                                userAnswer = -1;
-                            }
-                            console.log(userAnswer);
-                            dataReturn.push(userAnswer);
-
-                            //Check if we're in a new section
-                            questionsInSection++;
-                            if (questionsInSection==parts[sectionsPassed].questions.length)
-                            {
-                                sectionsPassed++;
-                                questionsInSection = 0;
-
-                                $(currentSection).hide();
-                                currentSection = '.section'+sectionsPassed;
-                                $(currentSection).show();
-                            }
-
-                            //Check if there even is a next question
-                            clicked++;
-                            nextQuestion = '.question'+clicked;
-
-                            //If not, display finished and exit loop:
-                            if(clicked==questionCounter)
-                            {
-                                $('.rateML').show();
-
-                                console.log(dataReturn);
-                                        
-                                //Call Firebase
-                                var dbRefProbs = firebase.database().ref('Probs');
-
-                                //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
-                                dbRefProbs.once('value', (response) => {
-                                    initialSeqData = response.val().data;
-                                });
-
-                                //Exit loop
-                                foundNextQuestion = true;
-                            }
-
-                            //Otherwise, check whether or not we display next question:
-                            else
-                            {
-                                $(currentQuestion).hide();
-                                if(seqToRun[userContext][clicked] == 1)
-                                {
-                                    $(nextQuestion).show();
-                                    foundNextQuestion = true;
-                                }
-
-                                //Otherwise, we just increase the round number and loop over to look for the next question  
-                            }
-
-                        round++;
-                        } 
-                     })
-                }
-
-
-                //If we need to display a Why-High (for medical only, not on first question of each section):
-                else if(userContext == 0 && selectedAnswer > 2 && clicked != 0 && clicked != 6 && clicked != 13)
-                {
-
-                    console.log('WHY - High')
-
-                    $('.question'+clicked).hide();
-                    $('.whyHigh').attr('checked',false);
-                    $('.whyHigh').show();
-
-                     $('.whyHigh').on('submit', function(e){
-
-                        //Prevent page from refreshing
-                        e.preventDefault();
-
-                        $('.whyHigh').hide();
-                        console.log($('input[name=whyHigh]:checked').val());
-
-                        otherReason = '';
-
-                        if($('.whyHighOther').val() != '')
-                        {
-                            otherReason = $('.whyHighOther').val();
-                        }
-
-                        console.log(otherReason);
-
-                        $('.whyHighOther').val('');
-
-                        whys.push('Q'+clicked+'WH'+$('input[name=whyHigh]:checked').val()+otherReason);
-
-                        //While we haven't settled on a question to display
-                        while(foundNextQuestion == false)
-                        {
-                            //Check which question and section we're in
-                            currentQuestion = '.question'+clicked;
-                            currentSection = '.section'+sectionsPassed;
-
-                            //Get the answer, if the user just answered. Otherwise log -1:
-                            if(round == 0)
-                            {
-                                userAnswer = selectedAnswer;
-                            }
-                            else
-                            {
-                                userAnswer = -1;
-                            }
-                            console.log(userAnswer);
-                            dataReturn.push(userAnswer);
-
-                            //Check if we're in a new section
-                            questionsInSection++;
-                            if (questionsInSection==parts[sectionsPassed].questions.length)
-                            {
-                                sectionsPassed++;
-                                questionsInSection = 0;
-
-                                $(currentSection).hide();
-                                currentSection = '.section'+sectionsPassed;
-                                $(currentSection).show();
-                            }
-
-                            //Check if there even is a next question
-                            clicked++;
-                            nextQuestion = '.question'+clicked;
-
-                            //If not, display finished and exit loop:
-                            if(clicked==questionCounter)
-                            {
-                                $('.rateML').show();
-
-                                console.log(dataReturn);
-                                        
-                                //Call Firebase
-                                var dbRefProbs = firebase.database().ref('Probs');
-
-                                //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
-                                dbRefProbs.once('value', (response) => {
-                                    initialSeqData = response.val().data;
-                                });
-
-                                //Exit loop
-                                foundNextQuestion = true;
-                            }
-
-                            //Otherwise, check whether or not we display next question:
-                            else
-                            {
-                                $(currentQuestion).hide();
-                                if(seqToRun[userContext][clicked] == 1)
-                                {
-                                    $(nextQuestion).show();
-                                    foundNextQuestion = true;
-                                }
-
-                                //Otherwise, we just increase the round number and loop over to look for the next question  
-                            }
-
-                        round++;
-                        } 
-                     })
-                }
-
-
-
-                //else - no why: Just move on!
-                else
-                {    
-                    console.log('No Why')
-
-                    //While we haven't settled on a question to display
-                    while(foundNextQuestion == false)
-                    {
-                        //Check which question and section we're in
-                        currentQuestion = '.question'+clicked;
-                        currentSection = '.section'+sectionsPassed;
-
-                        //Get the answer, if the user just answered. Otherwise log -1:
-                        if(round == 0)
-                        {
-                            userAnswer = selectedAnswer;
-                        }
-                        else
-                        {
-                            userAnswer = -1;
-                        }
-                        console.log(userAnswer);
-                        dataReturn.push(userAnswer);
-
-                        //Check if we're in a new section
-                        questionsInSection++;
-                        if (questionsInSection==parts[sectionsPassed].questions.length)
-                        {
-                            sectionsPassed++;
-                            questionsInSection = 0;
-
-                            $(currentSection).hide();
-                            currentSection = '.section'+sectionsPassed;
-                            $(currentSection).show();
-                        }
-
-                        //Check if there even is a next question
-                        clicked++;
-                        nextQuestion = '.question'+clicked;
-
-                        //If not, display finished and exit loop:
-                        if(clicked==questionCounter)
-                        {
-                            $('.rateML').show();
-
-                            console.log(dataReturn);
-                                        
-                            //Call Firebase
-                            var dbRefProbs = firebase.database().ref('Probs');
-
-                            //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
-                            dbRefProbs.once('value', (response) => {
-                                initialSeqData = response.val().data;
-                            });
-
-                            //Exit loop
-                            foundNextQuestion = true;
-                        }
-
-                        //Otherwise, check whether or not we display next question:
-                        else
-                        {
-                            $(currentQuestion).hide();
-                            if(seqToRun[userContext][clicked] == 1)
-                            {
-                                $(nextQuestion).show();
-                                foundNextQuestion = true;
-                            }
-
-                            //Otherwise, we just increase the round number and loop over to look for the next question  
-                        }
-
-                    round++;
-                    }
-                }  
-            }              
-        })
-
-
-        //When 'Submit' is clicked (i.e. we're done)
-
-        //Display reflection section
-        $('.rateForm').on('submit', function(e){
+        //Reflection section (rate the system)
+        $('.ReflectButton').on('click', function(){
             //Prevent page from refreshing
-            e.preventDefault();
+            if($('.rateML').is(':checked'))
+            {
+                console.log('Rating')
 
-            console.log('Rating')
+                console.log($('input[name=rateML]:checked').val());
+                console.log($('.rateMLText').val());
 
-            console.log($('input[name=rateML]:checked').val());
-            console.log($('.rateMLText').val());
+                rating = {
+                    good: $('input[name=rateML]:checked').val(),
+                    reason: $('.rateMLText').val()
+                };
 
-            rating = {
-                good: $('input[name=rateML]:checked').val(),
-                reason: $('.rateMLText').val()
-            };
+                var dbRefProbs = firebase.database().ref('Probs');
 
-            var dbRefProbs = firebase.database().ref('Probs');
+                //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
+                dbRefProbs.once('value', (response) => {
+                    initialSeqData = response.val().data;
+                });
 
-            //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
-            dbRefProbs.once('value', (response) => {
-                initialSeqData = response.val().data;
-            });
-
-            $('.rateML').hide();
-            $('.commentSection').show();
+                $('.rateML').hide();
+                $('.commentSection').show();
+            }
         })
 
 
@@ -2221,40 +1689,24 @@
             //Push results into Firebase DB:
             var dbRef = firebase.database().ref('Results');
 
-            if(whys.length > 0)
-            {        
-                whyResults = [whys[0]];
-                whyCheck = 0;
-                for(w = 0; w  < whys.length; w++)
-                {
-                    if(whys[w].substring(0,3) != whyResults[whyCheck].substring(0,3))
-                    {
-                        whyResults.push(whys[w]);
-                        whyCheck++;
-                    }
-                }
-            }
-            else
-            {
-                whyResults = [];
-            }
+
 
             //Create result item:
             result = {
-                answers : dataReturn,
                 context : userContext,
                 feedback : userFeedback,
-                qSequence : runSummary,
-                whys: whyResults,
+                qSequence : runSummary[userContext],
                 rated : rating,
+                interactions : interactionRecord,
+                part1Answers : part1Ans,
+                part1Final : part1FinalAns,
                 part2Answers : part2Ans,
                 part2Final: part2FinalAns
             };
 
             console.log('Results recorded:');
             console.log(result);
-            console.log('whyResults')
-            console.log(whyResults)
+
 
             dbRef.push(result);
 
@@ -2267,7 +1719,7 @@
             //updatedUBC = updateUBC(dataReturn, initialSeqData, runSummary, dbAccesses);
 
             var updatedUCB;
-            updatedUCB = updateUCBPart2(initialSeqData);
+            updatedUCB = updateUCB(initialSeqData);
 
             returnData = 
             {
