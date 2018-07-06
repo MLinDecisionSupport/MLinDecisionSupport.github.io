@@ -9,7 +9,7 @@
   <div id='Intro'>
   <head>
  <h1>
-  Machine Learning in Prognostic Decision-Support Systems Study
+  Machine Learning in Prognostic Decision-Support Systems Study - Computer Science Perspective
  </h1>
 </head>
   <h3>Details</h3>
@@ -17,6 +17,7 @@
     Thank you for your interest in our study.</br>
     The purpose of the study is to investigate the factors that generate value for the use of Machine Learning models in generating prognostic predictions as part of decision-support systems designed to augment and complement the work of medical professionals and diagnosticians.<br/>
     In particular, we are looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and Decision-Support system design choices affect the confidence of medical experts in such systems.<br/>
+    This version of the study is catered towards <b>Computer Science experts</b>. We hope to compare their answers with those of medical experts, to identify any gaps.<br/>
     The study proceeds in two stages:
     <ol>
         <li><b>About the model</b>, which introduces and presents information regarding the <b>Neural Network</b> powering our Decision-Support System</li>
@@ -66,8 +67,8 @@
 
  <div class = 'IntroPart1'>
         <h2><b>Part 1</b>: About the Model</h2>
-        <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
-        <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your comprehension of, and confidence in, the decision-support system based on it.</p>
+        <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system to present to medical experts.</p>
+        <p>Please review each piece of information about the model and indicate your personal belief regarding whether doctors would find this information useful in increasing their comprehension of, and confidence in, the ML model and decision-support system based on it.</p>
         <p>Click 'Next' to proceed</p>
         <button class='StartPart1Button'>Next</button>
  </div>
@@ -91,10 +92,10 @@
         </ul>
         <hr style="border-top: dotted 1px;" />
         <div class = 'E1Q' class='evForm'>
-                <p>How useful do you find this information about the data used to train the model powering a decision-support system for heart failure patients?</p>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                <p>How useful do you believe medical experts would find this information about the data used to train the model powering a decision-support system for heart failure patients?</p>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: <b>Not useful</b> - Doctors will likely not understand or care about this information, and it will not impact their opinion of the model or decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information will likely contribute to doctors' understanding and makes them somewhat more confident in the model and decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: <b>Very useful</b> - This information will improves doctors' understanding and make them significantly more confident in the model and decision-support system<br><br> 
                 <button class = 'evFormButton'>Next</button>
         </div>
     </div>
@@ -110,10 +111,10 @@
             <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run.</p>
             <hr style="border-top: dotted 1px;" />
             <div class = 'E2Q' class='evForm'>
-                    <p>How useful do you find this information about the architecture and training methodology behind the model powering a decision-support system for heart failure patients?</p>
-                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                    <p>How useful do you believe medical experts would find this information about the architecture and training methodology behind the model powering a decision-support system for heart failure patients?</p>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=0> 1: <b>Not useful</b> - Doctors will likely not understand or care about this information, and it will not impact their opinion of the model or decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information will likely contribute to doctors' understanding and makes them somewhat more confident in the model and decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information will improves doctors' understanding and make them significantly more confident in the model and decision-support system<br><br> 
                     <button class = 'evFormButton'>Next</button>
             </div>
         </div>
@@ -128,10 +129,10 @@
                 <p>These metrics showcase the neural network model's high accuracy, especially when compared with alternative, simpler statistical models, and established risk scores.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E3Q' class='evForm'>
-                        <p>How useful do you find this information about the accuracy of the model powering a decision-support system for heart failure patients?</p>
-                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <p>How useful do you believe medical experts would find this information about the accuracy of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - Doctors will likely not understand or care about this information, and it will not impact their opinion of the model or decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information will likely contribute to doctors' understanding and makes them somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=2> 3: <b>Very useful</b> - This information will improves doctors' understanding and make them significantly more confident in the model and decision-support system<br><br> 
                         <button class = 'evFormButton'>Next</button>
                 </div>
             </div>
@@ -147,10 +148,10 @@
                 <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E4Q' class='evForm'>
-                        <p>How useful do you find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
-                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <p>How useful do you believe medical experts would find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - Doctors will likely not understand or care about this information, and it will not impact their opinion of the model or decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information will likely contribute to doctors' understanding and makes them somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=2> 3: <b>Very useful</b> - This information will improves doctors' understanding and make them significantly more confident in the model and decision-support system<br><br> 
                         <button class = 'evFormButton'>Next</button>
                 </div>
         </div>
@@ -168,10 +169,10 @@
                 <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E5Q' class='evForm'>
-                        <p>How useful do you find this decision-tree approximation of the model powering a decision-support system for heart failure patients?</p>
-                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
-                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
-                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br><br> 
+                        <p>How  useful do you believe medical experts would find this decision-tree approximation of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - Doctors will likely not understand or care about this information, and it will not impact their opinion of the model or decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information will likely contribute to doctors' understanding and makes them somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=2> 3: <b>Very useful</b> - This information will improves doctors' understanding and make them significantly more confident in the model and decision-support system<br><br> 
                         <button class = 'evFormButton'>Next</button>
                 </div>
         </div>
@@ -180,16 +181,16 @@
                 <h4>Rate your confidence</h4>
                 <p>Please consider the following question based on <b>all</b> the Model information and evidence seen so far:</p>
                 <div class = 'EFinal' class='evForm'>
-                        <p>Based on the information seen so far, how would you rate your confidence in the machine learning model and the decision-support system based on it?</p>
-                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=0> 1: <b>Not at all confident</b>, would not even consider looking at the model and its prediction as part of my decision-making process<br>
+                        <p>Supposed the evidence seen so far was presented to an series of clinicians, doctors, and medical experts. On avrage, how would you expect doctors to rate their confidence in the machine learning model and the decision-support system based on it? </p>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=0> 1: <b>Not at all confident</b>, would not even consider looking at the model and its prediction as part of their decision-making process<br>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=1> 2: <b>Not very confident</b>, unlikely to consider model<br>
-                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=2> 3: <b>Somewhat confident</b>, may consult model but unlikely to rely on it in any way <br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=2> 3: <b>Somewhat confident</b>, doctors may consult model but unlikely to rely on it in any way <br>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=3> 4: <b>Fairly confident</b>, likely to consult model and consider its predicted score<br>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=4> 5: <b>Very confident</b>, almost certain to consult model together with other tools when considering further medical decisions <br><br> 
                         Please explain why you have selected the answer above, providing more detail about:
                         <ul>
-                            <li>How the model details and evidence shown has affected your confidence in a decision-support system</li>
-                            <li>Which information was most and least effective</li>
+                            <li>How the model details and evidence shown might affect doctors' confidence in a decision-support system</li>
+                            <li>Which information would be most and least effective</li>
                             <li>What else you would have liked to see</li>
                         </ul>
                         <textarea comments cols=100 rows=5 placeholder='Details...' class = 'evFinalText' name='evFinalText'></textarea><br/>
@@ -202,10 +203,10 @@
 
  <div class = 'IntroPart2'>
         <h2><b>Part 2</b>: Decision Support System</h2>
-        <p>Starting on the next screen, you will be presented with a series of patients.</p>
+        <p>Starting on the next screen, you will be presented with a series of patients as part of a mock Decision-Support System.</p>
         <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
         <p>Each patient will be accompanied by a risk score generated using the Neural Network model discussed previously. In addition, medical information about the individual patients will be presented as well.</p>
-        <p>Please evaluate this information, and rate your satisfaction with the model and the Decision Support System as a whole.</p>
+        <p>Please evaluate this information, and rate your expectation of the average doctor's satisfaction with the model and the Decision-Support System as a whole.</p>
         <p>Click 'Next' to proceed</p>
         <button class='StartPart2'>Next</button>
  </div>
@@ -224,73 +225,73 @@
             <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
             <p>Adam admits to being an occasional smoker. He does not suffer from diabetes.</p>
 
-        <div class='P1INT'>
-            <hr style="border-top: dotted 1px;" />
-            <p>Click below to interact with the system</p>
-            <button class = 'P1Button'>Interact with Decision Support System</button>
-            <div class = 'Patient1DSS' class = 'P1'>
-                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
-                <select class = 'P1S1'>
-                        <option value='0'>Smoker</option>
-                        <option value='1'>Non-smoker</option>
-                </select>
-                <select class = 'P1S2'>
-                        <option value='0'>No prescription</option>
-                        <option value='1'>ACE Inhibitors</option>
-                        <option value='2'>Beta Blockers</option>
-                </select>
-                <button class = 'P1PButton'>Calculate</button><br><br>
-                Predicted Risk Score: 
-                <div class = 'P1P1'>15.9%</div>
-                <div class = 'P1P2' class = 'P1P'>12.9%</div>
-                <div class = 'P1P3' class = 'P1P'>13.4%</div>
-                <div class = 'P1P4' class = 'P1P'>15.1%</div>
-                <div class = 'P1P5' class = 'P1P'>12.2%</div>
-                <div class = 'P1P6' class = 'P1P'>12.6%</div>
-            </div>
-        </div>
-        
-        <div class='P1SLIM'>
+            <div class='P1INT'>
                 <hr style="border-top: dotted 1px;" />
-                <P>Click below to view the details of a linear approximation model for Adam's Risk Strata of 0-20%</P>
-                <button class = 'P1Button3'>Show Local Linear Approximation</button>
-                <div class = 'P1SLIMH'>
-                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
-                    <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                    <p>Below are the coefficients for all significant characteristics of Adam's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
-                    <p style="text-align:center;"><img src="NNSLIM0.png" style="width:200px;"></p>
+                <p>Click below to interact with the system</p>
+                <button class = 'P1Button'>Interact with Decision Support System</button>
+                <div class = 'Patient1DSS' class = 'P1'>
+                    <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                    <select class = 'P1S1'>
+                            <option value='0'>Smoker</option>
+                            <option value='1'>Non-smoker</option>
+                    </select>
+                    <select class = 'P1S2'>
+                            <option value='0'>No prescription</option>
+                            <option value='1'>ACE Inhibitors</option>
+                            <option value='2'>Beta Blockers</option>
+                    </select>
+                    <button class = 'P1PButton'>Calculate</button><br><br>
+                    Predicted Risk Score: 
+                    <div class = 'P1P1'>15.9%</div>
+                    <div class = 'P1P2' class = 'P1P'>12.9%</div>
+                    <div class = 'P1P3' class = 'P1P'>13.4%</div>
+                    <div class = 'P1P4' class = 'P1P'>15.1%</div>
+                    <div class = 'P1P5' class = 'P1P'>12.2%</div>
+                    <div class = 'P1P6' class = 'P1P'>12.6%</div>
                 </div>
-        </div>
-
-        <div class='P1TREE'>
-                <hr style="border-top: dotted 1px;" />
-                <P>Click below to view the details of a decision tree approximation model for Adam's Risk Strata of 0-20%</P>
-                <button class = 'P1Button4'>Show Decision Tree Approximation</button>
-                <div class = 'P1TREEH'>
-                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
-                    <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                    <p>Below is a representation of Adam's local depth-3 decision tree approximation.</p>
-                    <p style="text-align:center;"><img src="NNTREE0.png" style="width:700px;"></p>
-                </div>
-        </div>
-
-        <div class='P1OUT'>
-            <hr style="border-top: dotted 1px;" />
-            <p>Click below to find the patient's status 1 year after the heart failure event</p>
-            <button class = 'P1Button2'>Show Patient Outcome</button>
-            <div class='P1O'>
-                <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
             </div>
-        </div>
+            
+            <div class='P1SLIM'>
+                    <hr style="border-top: dotted 1px;" />
+                    <P>Click below to view the details of a linear approximation model for Adam's Risk Strata of 0-20%</P>
+                    <button class = 'P1Button3'>Show Local Linear Approximation</button>
+                    <div class = 'P1SLIMH'>
+                        <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
+                        <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                        <p>Below are the coefficients for all significant characteristics of Adam's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p style="text-align:center;"><img src="NNSLIM0.png" style="width:200px;"></p>
+                    </div>
+            </div>
+    
+            <div class='P1TREE'>
+                    <hr style="border-top: dotted 1px;" />
+                    <P>Click below to view the details of a decision tree approximation model for Adam's Risk Strata of 0-20%</P>
+                    <button class = 'P1Button4'>Show Decision Tree Approximation</button>
+                    <div class = 'P1TREEH'>
+                        <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
+                        <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                        <p>Below is a representation of Adam's local depth-3 decision tree approximation.</p>
+                        <p style="text-align:center;"><img src="NNTREE0.png" style="width:700px;"></p>
+                    </div>
+            </div>
+    
+            <div class='P1OUT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to find the patient's status 1 year after the heart failure event</p>
+                <button class = 'P1Button2'>Show Patient Outcome</button>
+                <div class='P1O'>
+                    <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
+                </div>
+            </div>
 
         <hr style="border-top: dotted 1px;" />
         <div class = 'P1Q'>
-            <p>Based on the information seen so far, including <b>Patient Adam</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                    <input type='radio' name='P1Q' class='P1Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+            <p>Based on the information seen so far, including <b>Patient Adam</b>, how satisfied would you expect an average doctor to be with the Decision Support System powered by a Neural Network model?</p>
+                    <input type='radio' name='P1Q' class='P1Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting their medical decision-making for heart failure patients<br>
                     <input type='radio' name='P1Q' class='P1Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                     <input type='radio' name='P1Q' class='P1Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
                     <input type='radio' name='P1Q' class='P1Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                    <input type='radio' name='P1Q' class='P1Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                    <input type='radio' name='P1Q' class='P1Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of their medical decision-making for heart failure patients <br><br> 
                     <button class = 'patientFormButton'>Next</button>
         </div>
 
@@ -368,12 +369,12 @@
 
             <hr style="border-top: dotted 1px;" />
             <div class = 'P2Q'>
-                    <p>Based on the information seen so far, including <b>Patient Betty</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P2Q' class='P2Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <p>Based on the information seen so far, including <b>Patient Betty</b>, how satisfied would you expect an average doctor to be with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P2Q' class='P2Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting their medical decision-making for heart failure patients<br>
                             <input type='radio' name='P2Q' class='P2Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P2Q' class='P2Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
                             <input type='radio' name='P2Q' class='P2Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P2Q' class='P2Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P2Q' class='P2Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of their medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -447,15 +448,15 @@
                     <p><i>Patient Clara was alive one year after her heart failure event. However, she passed away 2 years later.</i></p>
                 </div>
             </div>
-
+            
             <hr style="border-top: dotted 1px;" />
             <div class = 'P3Q'>
-                    <p>Based on the information seen so far, including <b>Patient Clara</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P3Q' class='P3Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <p>Based on the information seen so far, including <b>Patient Clara</b>, how satisfied would you expect an average doctor to be with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P3Q' class='P3Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting their medical decision-making for heart failure patients<br>
                             <input type='radio' name='P3Q' class='P3Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P3Q' class='P3Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
                             <input type='radio' name='P3Q' class='P3Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P3Q' class='P3Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P3Q' class='P3Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of their medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -529,12 +530,12 @@
             
             <hr style="border-top: dotted 1px;" />
             <div class = 'P4Q'>
-                    <p>Based on the information seen so far, including <b>Patient Drew</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P4Q' class='P4Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <p>Based on the information seen so far, including <b>Patient Drew</b>, how satisfied would you expect an average doctor to be with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P4Q' class='P4Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting their medical decision-making for heart failure patients<br>
                             <input type='radio' name='P4Q' class='P4Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
                             <input type='radio' name='P4Q' class='P4Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
                             <input type='radio' name='P4Q' class='P4Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P4Q' class='P4Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br><br> 
+                            <input type='radio' name='P4Q' class='P4Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of their medical decision-making for heart failure patients <br><br> 
                             <button class = 'patientFormButton'>Next</button>
             </div>
     </div>
@@ -546,7 +547,7 @@
 <div class='rateML'>
     <h2>Part 3: Reflection</h2>
     <p>Based on both the Model Information seen in Part 1 and the patient scenarios seen in Part 2, please answer the following:</p>
-    <p><b>Do you feel that the neural network model presented, which was used to power a decision-support system, augments your judgement and constitutes a valuable contribution to medical decision-making processes?</b></p>
+    <p><b>Do you feel that the neural network model presented, which was used to power a decision-support system, can augment the judgement of medical experts and constitutes a valuable contribution to medical decision-making processes?</b></p>
     <div class = 'rateForm'>
         <input type='radio' class='rateML' name='rateML' value=0>Yes<br>
         <input type='radio' class='rateML' name='rateML' value=0>No<br><br>
@@ -564,8 +565,8 @@
     <p>In particular, you may address the following:
         <ul>
             <li>What are your general thoughts of Machine Learning in decision-support systems for prognostic predictive purposes?</li>
-            <li>Was any of the model evidence and other information shown in Part 1 particularly effective or ineffective? Why?</li>
-            <li>Were the patient scenarios shown in Part 2 helpful in developing your confidence in the underlying model and system? Why or why not?</li>
+            <li>Did you find any of the model evidence and other information shown in Part 1 particularly effective or ineffective? Why?</li>
+            <li>Do you view the patient scenarios shown in Part 2 as helpful in developing doctors' confidence in the underlying model and system? Why or why not?</li>
             <li>Were there any areas of the survey you felt were confusing or potentially misleading?</li>
         </ul>
     </p>
@@ -634,9 +635,9 @@
                         {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -663,9 +664,9 @@
                         {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
-                        {seqCode:'Part2C', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -855,7 +856,7 @@
     }
 
     //Variables to store data:
-    userContext = 0;
+    userContext = 1;
     dataReturn = [];
     whys = [];
     rating = {};
@@ -1223,7 +1224,6 @@
                 }
             }
         })
-
 
 
         //Initiate survey:
