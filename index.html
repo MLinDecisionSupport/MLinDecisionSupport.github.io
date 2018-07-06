@@ -117,7 +117,7 @@
                     <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
                     <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br> 
                     <p>Please provide any comments or reasons supporting your answer:</p>
-                <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E2QText' name='E2QText'></textarea><br/>
+                    <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E2QText' name='E2QText'></textarea><br/>
                     <button class = 'evFormButton'>Next</button>
             </div>
         </div>
@@ -169,7 +169,7 @@
                 <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
                 <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
                 <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
-                <button class = 'treeButton'>Show Decision Trees</button>
+                <button class = 'treeButton' style='font-size:16px'>Show Decision Trees</button>
                 <div class = 'hideTree'>
                     <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
                 </div>
@@ -240,7 +240,7 @@
         <div class='P1INT'>
             <hr style="border-top: dotted 1px;" />
             <p>Click below to interact with the system</p>
-            <button class = 'P1Button'>Interact with Decision Support System</button>
+            <button class = 'P1Button' style='font-size:16px'>Interact with Decision Support System</button>
             <div class = 'Patient1DSS' class = 'P1'>
                 <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
                 <select class = 'P1S1'>
@@ -266,7 +266,7 @@
         <div class='P1SLIM'>
                 <hr style="border-top: dotted 1px;" />
                 <P>Click below to view the details of a linear approximation model for Adam's Risk Strata of 0-20%</P>
-                <button class = 'P1Button3'>Show Local Linear Approximation</button>
+                <button class = 'P1Button3' style='font-size:16px'>Show Local Linear Approximation</button>
                 <div class = 'P1SLIMH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                     <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -278,7 +278,7 @@
         <div class='P1TREE'>
                 <hr style="border-top: dotted 1px;" />
                 <P>Click below to view the details of a decision tree approximation model for Adam's Risk Strata of 0-20%</P>
-                <button class = 'P1Button4'>Show Decision Tree Approximation</button>
+                <button class = 'P1Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
                 <div class = 'P1TREEH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -290,7 +290,7 @@
         <div class='P1OUT'>
             <hr style="border-top: dotted 1px;" />
             <p>Click below to find the patient's status 1 year after the heart failure event</p>
-            <button class = 'P1Button2'>Show Patient Outcome</button>
+            <button class = 'P1Button2' style='font-size:16px'>Show Patient Outcome</button>
             <div class='P1O'>
                 <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
             </div>
@@ -325,7 +325,7 @@
             <div class='P2INT'>
                 <hr style="border-top: dotted 1px;" />
                 <p>Click below to interact with the system</p>
-                <button class = 'P2Button'>Interact with Decision Support System</button>
+                <button class = 'P2Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient2DSS' class = 'P2'>
                     <p>Examine how the following factors might impact Betty's predicted risk score, based on the Neural Network model utilized:</p>
                     <select class = 'P2S1'>
@@ -351,7 +351,7 @@
             <div class='P2SLIM'>
                     <hr style="border-top: dotted 1px;" />
                     <P>Click below to view the details of a linear approximation model for Betty's Risk Strata of 80-100%</P>
-                    <button class = 'P2Button3'>Show Local Linear Approximation</button>
+                    <button class = 'P2Button3' style='font-size:16px'>Show Local Linear Approximation</button>
                     <div class = 'P2SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -363,7 +363,7 @@
             <div class='P2TREE'>
                 <hr style="border-top: dotted 1px;" />
                 <P>Click below to view the details of a decision tree approximation model for Betty's Risk Strata of 80-100%</P>
-                <button class = 'P2Button4'>Show Decision Tree Approximation</button>
+                <button class = 'P2Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
                 <div class = 'P2TREEH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -375,7 +375,7 @@
             <div class='P2OUT'>
                 <hr style="border-top: dotted 1px;" />
                 <p>Click below to find the patient's status 1 year after the heart failure event</p>
-                <button class = 'P2Button2'>Show Patient Outcome</button>
+                <button class = 'P2Button2' style='font-size:16px'>Show Patient Outcome</button>
                 <div class='P2O'>
                     <p><i>Patient Betty unfortunately passed away 3 months following her heart failure event.</i></p>
                 </div>
@@ -409,7 +409,7 @@
             <div class='P3INT'>
                 <hr style="border-top: dotted 1px;" />
                 <p>Click below to interact with the system</p>
-                <button class = 'P3Button'>Interact with Decision Support System</button>
+                <button class = 'P3Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient3DSS' class = 'P3'>
                     <p>Examine how the following factors might impact Clara's predicted risk score, based on the Neural Network model utilized:</p>
                     <select class = 'P3S1'>
@@ -435,7 +435,7 @@
             <div class='P3SLIM'>
                     <hr style="border-top: dotted 1px;" />
                     <P>Click below to view the details of a linear approximation model for Clara's Risk Strata of 60-80%</P>
-                    <button class = 'P3Button3'>Show Local Linear Approximation</button>
+                    <button class = 'P3Button3' style='font-size:16px'>Show Local Linear Approximation</button>
                     <div class = 'P3SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -447,7 +447,7 @@
             <div class='P3TREE'>
                 <hr style="border-top: dotted 1px;" />
                 <P>Click below to view the details of a decision tree approximation model for Clara's Risk Strata of 60-80%</P>
-                <button class = 'P3Button4'>Show Decision Tree Approximation</button>
+                <button class = 'P3Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
                 <div class = 'P3TREEH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -459,7 +459,7 @@
             <div class='P3OUT'>
                     <hr style="border-top: dotted 1px;" />
                 <p>Click below to find the patient's status 1 year after the heart failure event</p>
-                <button class = 'P3Button2'>Show Patient Outcome</button>
+                <button class = 'P3Button2' style='font-size:16px'>Show Patient Outcome</button>
                 <div class='P3O'>
                     <p><i>Patient Clara was alive one year after her heart failure event. However, she passed away 2 years later.</i></p>
                 </div>
@@ -493,7 +493,7 @@
             <div class='P4INT'>
                 <hr style="border-top: dotted 1px;" />
                 <p>Click below to interact with the system</p>
-                <button class = 'P4Button'>Interact with Decision Support System</button>
+                <button class = 'P4Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient4DSS' class = 'P4'>
                     <p>Examine how the following factors might impact Drew's predicted risk score, based on the Neural Network model utilized:</p>
                     <select class = 'P4S1'>
@@ -516,7 +516,7 @@
             <div class='P4SLIM'>
                     <hr style="border-top: dotted 1px;" />
                     <P>Click below to view the details of a linear approximation model for Drew's Risk Strata of 60-80%</P>
-                    <button class = 'P4Button3'>Show Local Linear Approximation</button>
+                    <button class = 'P4Button3' style='font-size:16px'>Show Local Linear Approximation</button>
                     <div class = 'P4SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -528,7 +528,7 @@
             <div class='P4TREE'>
                 <hr style="border-top: dotted 1px;" />
                 <P>Click below to view the details of a decision tree approximation model for Drew's Risk Strata of 60-80%</P>
-                <button class = 'P4Button4'>Show Decision Tree Approximation</button>
+                <button class = 'P4Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
                 <div class = 'P4TREEH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
@@ -540,7 +540,7 @@
             <div class='P4OUT'>
                 <hr style="border-top: dotted 1px;" />
                 <p>Click below to find the patient's status 1 year after the heart failure event</p>
-                <button class = 'P4Button2'>Show Patient Outcome</button>
+                <button class = 'P4Button2' style='font-size:16px'>Show Patient Outcome</button>
                 <div class='P4O'>
                     <p><i>One year after his heart failure event, Patient Drew was alive. He unfortunately passed away 16 months following his heart failure event.</i></p>
                 </div>
@@ -1393,7 +1393,6 @@
                 patientsSeen++;
                 part2Ans.push($(':checked','.'+q).val());
                 part2Reasons.push($('.P'+patientsSeen+'QText').val());
-
 
                 if(patientsSeen < TotalNumPatients)
                 {
