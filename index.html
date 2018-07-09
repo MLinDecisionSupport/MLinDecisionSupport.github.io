@@ -734,16 +734,16 @@
 
         //Code to reset probs when we're testing something new - comment out
 
-        returnData = 
-                    {
-                        name:'X',
-                        data:sequenceData,
-                        accessCount:0
-                    };
-                    console.log(returnData);
-        
-                    //Log the updates
-                    dbRefProbs.set(returnData); 
+        //returnData = 
+        //            {
+        //                name:'X',
+        //                data:sequenceData,
+        //                accessCount:0
+        //            };
+        //            console.log(returnData);
+        //
+        //            //Log the updates
+        //            dbRefProbs.set(returnData); 
 
         dbRefProbs.once('value', (response) => {
             
